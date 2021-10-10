@@ -1,5 +1,7 @@
 import {useEffect, useReducer} from "react";
 import {_buttonModifiers, _modifiers} from "../Utilities/_valueModifiers";
+import MapComponent from "./MapComponent/MapComponent";
+import {_reducerDict} from "../Utilities/_reducerDict";
 
 const resetIndex = -1;
 const firstQuestion = 1;
@@ -27,9 +29,9 @@ export default function GameComponent(props) {
     }, [gameState.stageIndex]);
     
     function gameHandler(prevState, action) {
-        const questionIndex = prevState.questionIndex + action.modifier;
+        const questionIndex = prevState.questionIndex + action[_reducerDict.modifier];
         const [newQuestionIndex, newStageIndex] = handleStageIndex(prevState.stageIndex, questionIndex);
-        const displayMap = newQuestionIndex === resetIndex;
+        const displayMap = newStageIndex < 0 ? false : newQuestionIndex === resetIndex;
 
         return {
             ...prevState, 
@@ -54,7 +56,7 @@ export default function GameComponent(props) {
     
     function getPreviousStageQuestionsAmount(stageIndex) {
         if (stageIndex - 1 >= 0)
-            return  game.getStage(stageIndex - 1).getQuestionsAmount();
+            return game.getStage(stageIndex - 1).getQuestionsAmount();
         return 0;
     }
     
@@ -64,21 +66,34 @@ export default function GameComponent(props) {
         }
         
         if (stageIndex >= game.getStagesAmount()){
-            props.setPhase(_modifiers.increment)
+            props.setPhase(_modifiers.increment);
         }
     }
     
     function onClickHandler(event) {
         event.preventDefault();
         setGameState({
-            modifier: _modifiers[event.target.name]
-        })
+            [_reducerDict.modifier]: _modifiers[event.target.name]
+        });
     }
     
     return(
         <div>
-            <button onClick={onClickHandler} name={_buttonModifiers.previous}>Previous</button>
-            <button onClick={onClickHandler} name={_buttonModifiers.next}>Next</button>
+            {
+                gameState.displayMap &&
+                <MapComponent
+                    map={game.getStage(gameState.stageIndex).getMap()}
+                    setGameState={onClickHandler}
+                />
+            }
+            {
+                !gameState.displayMap &&
+                <button onClick={onClickHandler} name={_buttonModifiers.previous}>Previous</button>
+            }
+            {
+                !gameState.displayMap &&
+                <button onClick={onClickHandler} name={_buttonModifiers.next}>Next</button>
+            }
         </div>
     )
 } 
