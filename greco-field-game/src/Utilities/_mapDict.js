@@ -7,13 +7,13 @@ import map_5 from "../../public/videos/step_5.mp4";
 import map_6 from "../../public/videos/step_6.mp4";
 import map_7 from "../../public/videos/step_7.mp4";
 
-export const mapImports = {
-    map_1: map_0,
-    map_2: map_1,
-    map_3: map_2,
-    map_4: map_3,
-    map_5: map_4,
-    map_6: map_5,
-    map_7: map_6,
-    map_8: map_7,
+export const _mapImports = {
+    map_0: map_0,
+    map_1: map_1,
+    map_2: map_2,
+    map_3: map_3,
+    map_4: map_4,
+    map_5: map_5,
+    map_6: map_6,
+    map_7: map_7,
 }
