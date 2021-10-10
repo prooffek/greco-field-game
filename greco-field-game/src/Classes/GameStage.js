@@ -22,7 +22,7 @@ export class GameStage {
     }
     
     getQuestionObj(index){
-        if (!index < 0 || index >= this.getQuestionsAmount()){
+        if (index >= 0 && index < this.getQuestionsAmount()){
             return this.#questions[index];
         }
         return null;
