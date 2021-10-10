@@ -16,7 +16,6 @@ export class Game {
     }
     
     setStages(gameName) {
-        console.log("dict: ", _questions[gameName])
         let i = 0;
         const stages = [];
         
