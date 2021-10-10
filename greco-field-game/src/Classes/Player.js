@@ -1,9 +1,11 @@
 export class Player {
     #name;
+    #answers;
     #score;
     
     constructor() {
         this.#name = null;
+        this.#answers = [];
         this.#score = 0;
     }
     
