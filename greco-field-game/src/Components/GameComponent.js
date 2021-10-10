@@ -2,9 +2,10 @@ import {useEffect, useReducer} from "react";
 import {_buttonModifiers, _modifiers} from "../Utilities/_valueModifiers";
 import MapComponent from "./MapComponent/MapComponent";
 import {_reducerDict} from "../Utilities/_reducerDict";
+import QuestionPage from "./QuestionPageComponent/QuestionPage";
 
 const resetIndex = -1;
-const firstQuestion = 1;
+const firstQuestion = 0;
 
 const initGameState = {
     displayMap: true,
@@ -88,12 +89,19 @@ export default function GameComponent(props) {
             }
             {
                 !gameState.displayMap &&
+                <QuestionPage
+                    question={game.getStage(gameState.stageIndex).getQuestionObj(gameState.questionIndex)}
+                    setGameState={onClickHandler}
+                />
+            }
+            {/*{
+                !gameState.displayMap &&
                 <button onClick={onClickHandler} name={_buttonModifiers.previous}>Previous</button>
             }
             {
                 !gameState.displayMap &&
                 <button onClick={onClickHandler} name={_buttonModifiers.next}>Next</button>
-            }
+            }*/}
         </div>
     )
 } 
