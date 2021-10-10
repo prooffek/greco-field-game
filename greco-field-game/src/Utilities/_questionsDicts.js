@@ -1,10 +1,6 @@
 import {Question} from "../Classes/Question";
 import {_gameNamesDict} from "./_gameNamesDict";
 
-export const _questions = {
-    [_gameNamesDict.Italy.Gaddiciano]: gaddicianoQuestionsDict
-}
-
 const gaddicianoQuestionsDict = {
     stage_0: [
         new Question(
@@ -71,4 +67,8 @@ const gaddicianoQuestionsDict = {
             "Palei mìli ton alèo (Archaic olive mills)"
         )
     ]
+}
+
+export const _questions = {
+    [_gameNamesDict.Italy.Gaddiciano]: gaddicianoQuestionsDict
 }
