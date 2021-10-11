@@ -21,7 +21,7 @@ export class Question {
         return this.#correctAnswer;
     }
     
-    idAnswerCorrect(answer){
+    isAnswerCorrect(answer){
         return answer === this.#correctAnswer;
     }
 }
