@@ -4,6 +4,7 @@ import {Game} from "./Classes/Game";
 import {useState} from "react";
 import GameComponent from "./Components/GameComponent";
 import WelcomePage from "./Components/WelcomePage";
+import SummaryPage from "./Components/SummaryComponent/SummaryPage";
 
 const gamePhases = {
   welcomePage: 0,
@@ -36,6 +37,14 @@ function App() {
               setPhase={phaseHandler}
               // addAnswer={setPlayer}
               // answers={player.answers}
+          />
+        }
+        {
+          phase === gamePhases.summary &&
+          <SummaryPage
+              player={game.getPlayer()}
+              phase={phase}
+              setPhase={setPhase}
           />
         }
       </div>
