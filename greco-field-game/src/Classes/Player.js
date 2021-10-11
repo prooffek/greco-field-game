@@ -17,15 +17,26 @@ export class Player {
         return this.#name
     }
     
-    setScore(score) {
-        this.#score = score;
+    setScore() {
+        this.#score = this.#answers.filter(a => a.isCorrect === true).length
     }
     
-    incrementScore() {
-        this.#score++;
+    getScore() {
+        this.setScore();
+        return this.#score;
     }
     
-    decrementScore() {
-        this.#score--;
+    addAnswer(answer) {
+        let prevAnswer = this.#answers.filter(a => a.questionId === answer.questionId);
+        
+        if (prevAnswer.length > 0){
+            this.#answers.pop(prevAnswer);
+        }
+        
+        this.#answers.push(answer);
+    }
+    
+    getAnswers() {
+        return this.#answers;
     }
 }
