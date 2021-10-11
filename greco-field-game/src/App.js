@@ -15,16 +15,9 @@ function App() {
   const [game, setGame] = useState(new Game());
   const [phase, setPhase] = useState(gamePhases.welcomePage);
   
-  // console.log("game: ", game);
-  // console.log("phase: ", phase);
-  
   function phaseHandler(modifier) {
-      console.log("re-rendering");
       setPhase(phase + modifier)
   }
-
-  // console.log("render: ", phase === gamePhases.welcomePage);
-  // console.log("render: ", phase === gamePhases.game);
   
   return (
       <div className="page-container">

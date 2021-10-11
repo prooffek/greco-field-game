@@ -5,7 +5,6 @@ import "./WelcomePage.css";
 
 const WelcomePage = (props) => {
     const changePage = () => {
-        console.log("clicked");
         props.setNextPage(props.currentPage + 1);
     }
     
