@@ -18,7 +18,6 @@ export default function SummaryPage(props) {
                     <p>{player.getScore()}</p>
                 </div>
             </div>
-            <button className="navigation-btn summary-navigation-btn" onClick={onClickHandler}>Previous page</button>
         </section>
     );
 }
