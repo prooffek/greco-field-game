@@ -61,6 +61,13 @@
     border-radius: 3vw;
     /*max-width: 300px*/
     font-size: 2vh;
+}
+
+.selected-answer-btn {
+    background-color: dodgerblue;
+}
+
+.unselected-answer-btn {
     background-color: rgba(244, 233, 212, 0.5);
 }
 
