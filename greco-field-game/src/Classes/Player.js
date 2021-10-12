@@ -1,3 +1,5 @@
+import {removeDuplicatedAnswer} from "../Utilities/_utilityFunctions";
+
 export class Player {
     #name;
     #answers;
@@ -27,16 +29,17 @@ export class Player {
     }
     
     addAnswer(answer) {
-        let prevAnswer = this.#answers.filter(a => a.questionId === answer.questionId);
-        
-        if (prevAnswer.length > 0){
-            this.#answers.pop(prevAnswer);
-        }
-        
+        let prevAnswer = this.#answers.filter(a => a.questionId === answer.questionId)[0];
+        this.#answers = removeDuplicatedAnswer(this.#answers, prevAnswer);
         this.#answers.push(answer);
     }
     
     getAnswers() {
         return this.#answers;
+    }
+    
+    getAnswer(questionId) {
+        let answer = this.#answers.filter(a => a.questionId === questionId)[0];
+        return answer ? answer.answer : null;
     }
 }
