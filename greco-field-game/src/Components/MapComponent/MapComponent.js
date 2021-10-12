@@ -2,18 +2,8 @@ import "./MapContent.css";
 import {_buttonModifiers} from "../../Utilities/_valueModifiers";
 
 const MapComponent = (props) => {
-    // const mapIndex = Math.floor(props.currentPage / 2) + 1;
     const mapName = props.map;
     const setGameState = props.setGameState;
-    
-    console.log("map: ", mapName);
-
-    // function onClickHandler(event) {
-    //     event.preventDefault();
-    //     setGameState({
-    //         [_reducerDict.modifier]: _modifiers[event.target.name]
-    //     });
-    // }
     
     return (
         <section className="video-page-container" >

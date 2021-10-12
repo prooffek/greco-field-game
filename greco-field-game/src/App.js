@@ -1,9 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import {Game} from "./Classes/Game";
 import {useState} from "react";
 import GameComponent from "./Components/GameComponent";
 import WelcomePage from "./Components/WelcomePage";
+import SummaryPage from "./Components/SummaryComponent/SummaryPage";
 
 const gamePhases = {
   welcomePage: 0,
@@ -15,16 +15,9 @@ function App() {
   const [game, setGame] = useState(new Game());
   const [phase, setPhase] = useState(gamePhases.welcomePage);
   
-  // console.log("game: ", game);
-  // console.log("phase: ", phase);
-  
   function phaseHandler(modifier) {
-      console.log("re-rendering");
       setPhase(phase + modifier)
   }
-
-  // console.log("render: ", phase === gamePhases.welcomePage);
-  // console.log("render: ", phase === gamePhases.game);
   
   return (
       <div className="page-container">
@@ -43,6 +36,14 @@ function App() {
               setPhase={phaseHandler}
               // addAnswer={setPlayer}
               // answers={player.answers}
+          />
+        }
+        {
+          phase === gamePhases.summary &&
+          <SummaryPage
+              player={game.getPlayer()}
+              phase={phase}
+              setPhase={setPhase}
           />
         }
       </div>

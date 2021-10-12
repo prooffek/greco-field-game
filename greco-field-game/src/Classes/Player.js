@@ -1,3 +1,5 @@
+import {removeDuplicatedAnswer} from "../Utilities/_utilityFunctions";
+
 export class Player {
     #name;
     #answers;
@@ -17,15 +19,27 @@ export class Player {
         return this.#name
     }
     
-    setScore(score) {
-        this.#score = score;
+    setScore() {
+        this.#score = this.#answers.filter(a => a.isCorrect === true).length
     }
     
-    incrementScore() {
-        this.#score++;
+    getScore() {
+        this.setScore();
+        return this.#score;
     }
     
-    decrementScore() {
-        this.#score--;
+    addAnswer(answer) {
+        let prevAnswer = this.#answers.filter(a => a.questionId === answer.questionId)[0];
+        this.#answers = removeDuplicatedAnswer(this.#answers, prevAnswer);
+        this.#answers.push(answer);
+    }
+    
+    getAnswers() {
+        return this.#answers;
+    }
+    
+    getAnswer(questionId) {
+        let answer = this.#answers.filter(a => a.questionId === questionId)[0];
+        return answer ? answer.answer : null;
     }
 }
