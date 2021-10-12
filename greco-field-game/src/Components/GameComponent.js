@@ -15,8 +15,6 @@ const initGameState = {
 export default function GameComponent(props) {
     const game = props.game;
     const [gameState, setGameState] = useReducer(gameHandler, initGameState);
-
-    console.log("game state: ", gameState);
     
     useEffect(() => {
         handleGamePhase(gameState.stageIndex);
@@ -39,7 +37,7 @@ export default function GameComponent(props) {
         if (questionIndex < resetIndex) {
             const newQuestionIndex = getPreviousStageQuestionsAmount(stageIndex) - 1;
             return [newQuestionIndex, stageIndex + _modifiers.decrement];
-        } 
+        }
         
         if (questionIndex >= game.getStage(stageIndex).getQuestionsAmount()) {
             return [resetIndex, stageIndex + _modifiers.increment];
@@ -74,14 +72,14 @@ export default function GameComponent(props) {
     return(
         <div>
             {
-                gameState.displayMap &&
+                gameState.displayMap && gameState.stageIndex < game.getStagesAmount() &&
                 <MapComponent
                     map={game.getStage(gameState.stageIndex).getMap()}
                     setGameState={onClickHandler}
                 />
             }
             {
-                gameState.questionIndex >= 0 &&
+                gameState.questionIndex >= 0 && gameState.stageIndex < game.getStagesAmount() &&
                 <QuestionPage
                     question={game.getStage(gameState.stageIndex).getQuestionObj(gameState.questionIndex)}
                     setGameState={onClickHandler}
