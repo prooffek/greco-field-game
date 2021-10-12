@@ -1,21 +1,32 @@
-import {_answers} from "../../Utilities/_wrongAnswersDict";
-import {getRandomEl, shuffleList} from "../../Utilities/_utilityFunctions";
+import {useState} from "react";
 
 export default function AnswerComponent(props) {
     const question = props.question;
     const player = props.player;
-    const answers = [question.getCorrectAnswer(), ...getRandomEl(3, _answers)];
-    shuffleList(answers);
+    const answers = question.getAnswersList();
+    
+    const [selectedAnswer, setSelectedAnswer] = useState(player.getAnswer(question.getId()));
     
     const answerHandler = (event) => {
         event.preventDefault();
         
-        const selectedAnswer = event.target.name;
+        const selected = event.target.name;
+        
         player.addAnswer({
                 questionId: question.getId(), 
-                isCorrect: question.isAnswerCorrect(selectedAnswer)
+                isCorrect: question.isAnswerCorrect(selected),
+                answer: selected
             }
         );
+        setSelectedAnswer(selected);
+    }
+    
+    const isSelected = (answer) => {
+        if (answer) {
+            const selected = player.getAnswer(question.getId());
+            return answer === selected;
+        }
+        return false;
     }
 
     return(
@@ -24,7 +35,7 @@ export default function AnswerComponent(props) {
             {answers.map(a =>
                 <button
                     key={`answer_${answers.indexOf(a)}`}
-                    className="answer-btn"
+                    className={`answer-btn ${isSelected(a) ? "selected-answer-btn" : "unselected-answer-btn"}`}
                     name={a}
                     onClick={answerHandler}
                 >
