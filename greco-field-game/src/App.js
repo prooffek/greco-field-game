@@ -1,8 +1,8 @@
 import './App.css';
 import {Game} from "./Classes/Game";
 import {useState} from "react";
-import GameComponent from "./Components/GameComponent";
-import WelcomePage from "./Components/WelcomePage";
+import GameComponent from "./Components/GameComponent/GameComponent";
+import WelcomePage from "./Components/WelcomePageComponent/WelcomePage";
 import SummaryPage from "./Components/SummaryComponent/SummaryPage";
 
 const gamePhases = {
@@ -41,7 +41,7 @@ function App() {
         {
           phase === gamePhases.summary &&
           <SummaryPage
-              player={game.getPlayer()}
+              game={game}
               phase={phase}
               setPhase={setPhase}
           />
