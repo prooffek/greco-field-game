@@ -1,8 +1,8 @@
 import {useEffect, useReducer} from "react";
-import {_modifiers} from "../Utilities/_valueModifiers";
-import MapComponent from "./MapComponent/MapComponent";
-import {_reducerDict} from "../Utilities/_reducerDict";
-import QuestionPage from "./QuestionPageComponent/QuestionPage";
+import {_modifiers} from "../../Utilities/_valueModifiers";
+import MapComponent from "./../MapComponent/MapComponent";
+import {_reducerDict} from "../../Utilities/_reducerDict";
+import QuestionPage from "./../QuestionPageComponent/QuestionPage";
 
 const resetIndex = -1;
 
