@@ -9,10 +9,6 @@ export class GameStage {
         this.#questions = questions;
     }
     
-    getStageIndex(){
-        return this.#index;
-    }
-    
     getMap() {
         return this.#map;
     }
@@ -28,5 +24,7 @@ export class GameStage {
         return null;
     }
     
-    
+    getQuestions() {
+        return this.#questions;
+    }
 }
