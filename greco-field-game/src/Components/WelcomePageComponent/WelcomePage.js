@@ -1,5 +1,5 @@
-﻿import header from "./../img/page-title-cropped.png";
-import map from "./../img/welcom-page-map.png";
+﻿import header from "./../../img/page-title-cropped.png";
+import map from "./../../img/welcom-page-map.png";
 
 import "./WelcomePage.css";
 
