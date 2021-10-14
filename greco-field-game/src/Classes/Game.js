@@ -53,7 +53,9 @@ export class Game {
         return this.#stages;
     }
     
-    static cloneGameObj(gameObj){
-        return new this(gameObj.getName(), gameObj.getPlayer());
+    getAllQuestions() {
+        const questions = [];
+        this.#stages.map(stage => questions.push(...stage.getQuestions()))
+        return questions;
     }
 }
