@@ -4,7 +4,9 @@ export default function SummaryPage(props) {
     const game = props.game;
     const player = game.getPlayer();
     const questions = game.getAllQuestions();
-    console.log("answer", player.getAnswer(questions[0].getId()));
+    // console.log("answer", player.getAnswer(questions[0].getId()));
+    
+    const isCorrect = question => question.isAnswerCorrect(player.getAnswer(question.getId()));
     
     // const setPhase = props.setPhase;
     // const phase = props.currentPhase
@@ -21,17 +23,30 @@ export default function SummaryPage(props) {
                     <h1>Your result:</h1>
                     <p>{player.getScore()}</p>
                 </div>
-                <div className="result-container">
-                    {questions.map(question =>
-                        <div>
-                            <h2>Question {question.getId() + 1}</h2>
-                            <h3>{question.getQuestionText()}</h3>
-                            <p>Correct answer: {question.getCorrectAnswer()}</p>
-                            <p>Your answer: {player.getAnswer(question.getId())}</p>
-                        </div>
-                    )}
+                    <div className="summary-table">
+                        {questions.map(question => 
+                            <div>
+                                <h2>Question {question.getId() + 1}</h2>
+                                <h3>{question.getQuestionText()}</h3>
+                                {
+                                    !isCorrect(question) &&
+                                    <p>
+                                        <span className="correct-answer">
+                                            Correct answer: 
+                                        </span> 
+                                        {question.getCorrectAnswer()}
+                                    </p>
+                                }
+                                <p>
+                                    <span className={isCorrect(question) ? "correct-answer" : "incorrect-answer"}>
+                                        Your answer: 
+                                    </span>
+                                    {player.getAnswer(question.getId())}
+                                </p>
+                            </div>
+                        )}
+                    </div>
                 </div>
-            </div>
         </section>
     );
 }
