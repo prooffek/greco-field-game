@@ -1,10 +1,7 @@
-import {_gameNamesDict} from "../Utilities/_gameNamesDict";
 import {GameStage} from "./GameStage";
-import {_mapImports} from "../Utilities/_mapDict";
-import {Player} from "./Player";
+import {_mapImports} from "../Utilities/_dictionaries";
 import {_loadFile} from "../fileLoader/fileLoader";
-import {_places, _targets} from "../Utilities/_targetsDict";
-import {_languages} from "../Utilities/_languagesDict";
+import {_places, _targetFolders} from "../Utilities/_dictionaries";
 import {getStagesNumber} from "../Utilities/_utilityFunctions";
 
 export class Game {
@@ -20,7 +17,7 @@ export class Game {
     
     setStages(gameName, language) {
         const stages = [];
-        const questions = _loadFile(_places[gameName], _targets.questions, language)
+        const questions = _loadFile(_places[gameName], _targetFolders.questions, language)
         
         for (let i = 0; i <= getStagesNumber(questions); i++) {
             stages.push(

@@ -4,9 +4,9 @@ import {useState} from "react";
 import GameComponent from "./Components/GameComponent/GameComponent";
 import WelcomePage from "./Components/WelcomePageComponent/WelcomePage";
 import SummaryPage from "./Components/SummaryComponent/SummaryPage";
-import {_gameNamesDict} from "./Utilities/_gameNamesDict";
+import {_gameNamesDict} from "./Utilities/_dictionaries";
 import {Player} from "./Classes/Player";
-import {_languages} from "./Utilities/_languagesDict";
+import {_languages} from "./Utilities/_dictionaries";
 
 const gamePhases = {
   welcomePage: 0,

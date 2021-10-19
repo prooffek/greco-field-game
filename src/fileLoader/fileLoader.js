@@ -1,21 +1,21 @@
-import {_languages} from "../Utilities/_languagesDict";
-import {_places, _targets} from "../Utilities/_targetsDict";
+import {_languages} from "../Utilities/_dictionaries";
+import {_places, _targetFolders} from "../Utilities/_dictionaries";
 import {Question} from "../Classes/Question";
-import {_gameNamesDict} from "../Utilities/_gameNamesDict";
+import {_gameNamesDict} from "../Utilities/_dictionaries";
 
 let placeName;
 let targetFolder;
 let lang;
 
-export function _loadFile(place=_places[_gameNamesDict.Italy.Gaddiciano], dataType=_targets.questions, language=_languages.english) {
+export function _loadFile(place=_places[_gameNamesDict.Italy.Gaddiciano], dataType=_targetFolders.questions, language=_languages.english) {
     placeName = place;
     targetFolder = dataType;
     lang = language;
     
     switch (dataType) {
-        case _targets.questions:
+        case _targetFolders.questions:
             return loadQuestions();
-        case _targets.wrongAnswers:
+        case _targetFolders.wrongAnswers:
             return loadListFromFile(targetFolder)
         default:
             return [];
@@ -36,7 +36,7 @@ function loadQuestions() {
                 question.text, 
                 question.correctAnswer, 
                 question.stage,
-                loadListFromFile(_targets.wrongAnswers)));
+                loadListFromFile(_targetFolders.wrongAnswers)));
     }
     
     return questions;
