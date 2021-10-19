@@ -6,7 +6,7 @@ const MapComponent = (props) => {
     const setGameState = props.setGameState;
     
     return (
-        <section className="video-page-container" >
+        <section className="video-page-container">
             <video className="video-background-container" autoPlay loop muted >
                 <source src={mapName} type="video/mp4" />
             </video>
