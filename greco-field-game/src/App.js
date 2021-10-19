@@ -20,7 +20,7 @@ function App() {
   }
   
   return (
-      <div className="page-container">
+      <div className="page-container scrollable">
         {
           phase === gamePhases.welcomePage &&
           <WelcomePage
