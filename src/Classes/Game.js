@@ -1,27 +1,35 @@
 import {_gameNamesDict} from "../Utilities/_gameNamesDict";
 import {GameStage} from "./GameStage";
 import {_mapImports} from "../Utilities/_mapDict";
-import {_questions} from "../Utilities/_questionsDicts";
 import {Player} from "./Player";
+import {_loadFile} from "../fileLoader/fileLoader";
+import {_places, _targets} from "../Utilities/_targetsDict";
+import {_languages} from "../Utilities/_languagesDict";
+import {getStagesNumber} from "../Utilities/_utilityFunctions";
 
 export class Game {
     #gameName;
     #player;
     #stages;
     
-    constructor(gameName = _gameNamesDict.Italy.Gaddiciano, player = new Player()) {
+    constructor(gameName, player, language) {
         this.#gameName = gameName;
         this.#player = player;
-        this.#stages = this.setStages(gameName);
+        this.#stages = this.setStages(gameName, language);
     }
     
-    setStages(gameName) {
-        let i = 0;
+    setStages(gameName, language) {
         const stages = [];
+        const questions = _loadFile(_places[gameName], _targets.questions, language)
         
-        for (const [key, value] of Object.entries(_questions[gameName])){
-            stages.push(new GameStage(i, _mapImports[`map_${i}`], value))
-            i++;
+        for (let i = 0; i <= getStagesNumber(questions); i++) {
+            stages.push(
+                new GameStage(
+                    i, 
+                    _mapImports[`map_${i}`], 
+                    questions.filter(question => question.getStage() === i)
+                )
+            );
         }
         
         return stages;

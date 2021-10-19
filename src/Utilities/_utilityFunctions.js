@@ -21,3 +21,14 @@ export function removeDuplicatedAnswer(list, answer) {
     }
     return list;
 }
+
+export function getStagesNumber(questions) {
+    let max = 0;
+    
+    for (const question of questions) {
+        let stage = question.getStage();
+        if (max < stage) max = stage; 
+    }
+    
+    return max;
+}

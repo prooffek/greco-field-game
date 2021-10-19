@@ -1,21 +1,26 @@
 import {getRandomEl, shuffleList} from "../Utilities/_utilityFunctions";
-import {_answers} from "../Utilities/_wrongAnswersDict";
 
 export class Question {
     #id;
     #text;
     #correctAnswer;
     #answersList;
+    #stage;
 
-    constructor(id, text, correctAnswer) {
+    constructor(id, text, correctAnswer, stage, wrongAnswers) {
         this.#id = id;
         this.#text = text;
         this.#correctAnswer = correctAnswer;
-        this.#answersList = this.setAnswersList();
+        this.#stage = stage;
+        this.#answersList = this.setAnswersList(wrongAnswers);
     }
 
     getId() {
         return this.#id;
+    }
+    
+    getStage() {
+        return this.#stage;
     }
     
     getQuestionText() {
@@ -30,8 +35,8 @@ export class Question {
         return answer === this.#correctAnswer;
     }
     
-    setAnswersList() {
-        let answers = [this.#correctAnswer, ...getRandomEl(3, _answers)]
+    setAnswersList(wrongAnswers) {
+        let answers = [this.#correctAnswer, ...getRandomEl(3, wrongAnswers)]
         shuffleList(answers);
         return answers;
     }

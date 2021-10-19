@@ -4,6 +4,9 @@ import {useState} from "react";
 import GameComponent from "./Components/GameComponent/GameComponent";
 import WelcomePage from "./Components/WelcomePageComponent/WelcomePage";
 import SummaryPage from "./Components/SummaryComponent/SummaryPage";
+import {_gameNamesDict} from "./Utilities/_gameNamesDict";
+import {Player} from "./Classes/Player";
+import {_languages} from "./Utilities/_languagesDict";
 
 const gamePhases = {
   welcomePage: 0,
@@ -11,8 +14,12 @@ const gamePhases = {
   summary: 2
 }
 
+const gameName = _gameNamesDict.Italy.Gaddiciano;
+const newPlayer = new Player();
+const language = _languages.english;
+
 function App() {
-  const [game, setGame] = useState(new Game());
+  const [game, setGame] = useState(new Game(gameName, newPlayer, language));
   const [phase, setPhase] = useState(gamePhases.welcomePage);
   
   function phaseHandler(modifier) {
