@@ -4,7 +4,6 @@ export default function SummaryPage(props) {
     const game = props.game;
     const player = game.getPlayer();
     const questions = game.getAllQuestions();
-    // console.log("answer", player.getAnswer(questions[0].getId()));
     
     const isCorrect = question => question.isAnswerCorrect(player.getAnswer(question.getId()));
     
@@ -23,7 +22,7 @@ export default function SummaryPage(props) {
                     <h1>Your result:</h1>
                     <p>{player.getScore()}</p>
                 </div>
-                    <div className="summary-table">
+                    <div className="summary-table scrollable">
                         {questions.map(question => 
                             <div>
                                 <h2>Question {question.getId() + 1}</h2>
