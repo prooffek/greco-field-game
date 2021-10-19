@@ -13,3 +13,11 @@
   height: 100vh;
   width: 100vw;
 }
+
+.scrollable {
+  overflow: auto;
+}
+
+.scrollable::-webkit-scrollbar {
+  display: none;
+}
