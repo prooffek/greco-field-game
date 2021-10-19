@@ -1,5 +1,5 @@
 import "./MapContent.css";
-import {_buttonModifiers} from "../../Utilities/_valueModifiers";
+import {_buttonModifiers} from "../../Utilities/_dictionaries";
 
 const MapComponent = (props) => {
     const mapName = props.map;

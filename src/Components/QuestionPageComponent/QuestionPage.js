@@ -1,5 +1,5 @@
 import "./QuestionPage.css";
-import {_buttonModifiers} from "../../Utilities/_valueModifiers";
+import {_buttonModifiers} from "../../Utilities/_dictionaries";
 import AnswerComponent from "./AnswerComponent";
 
 export default function QuestionPage(props) {

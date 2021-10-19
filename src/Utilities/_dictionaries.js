@@ -1,3 +1,12 @@
+import map_0 from "../videos/step_0.mp4";
+import map_1 from "../videos/step_1.mp4";
+import map_2 from "../videos/step_2.mp4";
+import map_3 from "../videos/step_3.mp4";
+import map_4 from "../videos/step_4.mp4";
+import map_5 from "../videos/step_5.mp4";
+import map_6 from "../videos/step_6.mp4";
+import map_7 from "../videos/step_7.mp4";
+
 export const _gameNamesDict = {
     Italy: {
         Gaddiciano: "Gaddiciano Field Game",
@@ -9,15 +18,6 @@ export const _languages = {
     english: "EN",
     italian: "IT"
 }
-
-import map_0 from "../videos/step_0.mp4";
-import map_1 from "../videos/step_1.mp4";
-import map_2 from "../videos/step_2.mp4";
-import map_3 from "../videos/step_3.mp4";
-import map_4 from "../videos/step_4.mp4";
-import map_5 from "../videos/step_5.mp4";
-import map_6 from "../videos/step_6.mp4";
-import map_7 from "../videos/step_7.mp4";
 
 export const _mapImports = {
     map_0: map_0,
@@ -52,8 +52,3 @@ export const _buttonModifiers = {
     next: "increment",
     previous: "decrement"
 }
-
-
-
-
-
