@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="76ff7dad-edc5-4a5a-b037-80a68ffc7cd7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Greco-Game.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Greco-Game.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/SummaryComponent/SummaryPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SummaryComponent/SummaryPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service-worker.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +28,13 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/public/manifest.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/service-worker.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/index.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/package-lock.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/serviceWorkerRegistration.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1ziwi3qgcQDFICPj7G6w8Qyvwmt" />
   <component name="ProjectLevelVcsManager">
@@ -69,6 +75,11 @@
       <workItem from="1634711505328" duration="389000" />
       <workItem from="1634796483220" duration="779000" />
       <workItem from="1634797682072" duration="1033000" />
+      <workItem from="1634818692641" duration="2187000" />
+      <workItem from="1634822613369" duration="349000" />
+      <workItem from="1634823423674" duration="296000" />
+      <workItem from="1634825217105" duration="1675000" />
+      <workItem from="1634829080693" duration="538000" />
     </task>
     <servers />
   </component>

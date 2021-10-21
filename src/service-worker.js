@@ -12,6 +12,7 @@ import { ExpirationPlugin } from 'workbox-expiration';
 import { precacheAndRoute, createHandlerBoundToURL } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
 import { StaleWhileRevalidate } from 'workbox-strategies';
+import {waitForElementToBeRemoved} from "@testing-library/react";
 
 clientsClaim();
 
@@ -70,3 +71,12 @@ self.addEventListener('message', (event) => {
 });
 
 // Any other custom service worker logic can go here.
+/*
+self.addEventListener('fetch', e => {
+    e.respondWith(
+        caches.match(e.request).then(res => {
+            if (res) return res;
+            return fetch(e.request);
+        })
+    );
+});*/
