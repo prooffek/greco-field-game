@@ -5,10 +5,10 @@ export class Player {
     #answers;
     #score;
     
-    constructor() {
-        this.#name = null;
-        this.#answers = [];
-        this.#score = 0;
+    constructor(name=null, answers=[], score=0) {
+        this.#name = name;
+        this.#answers = answers;
+        this.#score = score;
     }
     
     setName(name) {
@@ -41,5 +41,13 @@ export class Player {
     getAnswer(questionId) {
         let answer = this.#answers.filter(a => a.questionId === questionId)[0];
         return answer ? answer.answer : null;
+    }
+
+    getObject() {
+        return {
+            name: this.#name,
+            answers: this.#answers,
+            score: this.#score
+        }
     }
 }

@@ -1,3 +1,8 @@
+import {GameStage} from "../Classes/GameStage";
+import {Question} from "../Classes/Question";
+import {Player} from "../Classes/Player";
+import {Game} from "../Classes/Game";
+
 export function getRandomEl(counter, list) {
     let listToReturn = [];
     
@@ -31,4 +36,30 @@ export function getStagesNumber(questions) {
     }
     
     return max;
+}
+
+export function parsToGameObject(object) {
+    const game = object.game;
+    
+    const player = game.player;
+    const stages = [
+        ...game.stages.map(stage => new GameStage(
+            stage.index,
+            stage.map,
+            stage.questions.map(question => new Question(
+                question.id,
+                question.text,
+                question.correctAnswer,
+                question.stage,
+                question.answersList
+            ))
+        ))
+    ];
+
+    return new Game(
+        game.gameName,
+        new Player(player.name, player.answers, player.score),
+        game.language,
+        stages
+    )
 }

@@ -8,16 +8,18 @@ export class Game {
     #gameName;
     #player;
     #stages;
+    #language;
     
-    constructor(gameName, player, language) {
+    constructor(gameName, player, language, stages=null) {
         this.#gameName = gameName;
         this.#player = player;
-        this.#stages = this.setStages(gameName, language);
+        this.#language = language;
+        this.#stages = stages === null ? this.setStages(gameName) : stages;
     }
     
-    setStages(gameName, language) {
+    setStages(gameName) {
         const stages = [];
-        const questions = _loadFile(_places[gameName], _targetFolders.questions, language)
+        const questions = _loadFile(_places[gameName], _targetFolders.questions, this.#language)
         
         for (let i = 0; i <= getStagesNumber(questions); i++) {
             stages.push(
@@ -62,5 +64,13 @@ export class Game {
         const questions = [];
         this.#stages.map(stage => questions.push(...stage.getQuestions()))
         return questions;
+    }
+    
+    getObject() {
+        return {
+            gameName: this.#gameName,
+            player: this.#player.getObject(),
+            stages: [...this.#stages.map(stage => stage.getObject())]
+        };
     }
 }

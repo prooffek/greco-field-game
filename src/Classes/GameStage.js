@@ -27,4 +27,12 @@ export class GameStage {
     getQuestions() {
         return this.#questions;
     }
+
+    getObject() {
+        return {
+            index: this.#index,
+            map: this.#map,
+            questions: [...this.#questions.map(question => question.getObject())]
+        };
+    }
 }
