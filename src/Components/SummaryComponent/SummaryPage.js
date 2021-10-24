@@ -1,7 +1,10 @@
 import "./SummaryPage.css";
+import {_state} from "../../Utilities/_dictionaries";
 
 export default function SummaryPage(props) {
-    const game = props.game;
+    console.log("summary page");
+    
+    const game = props.state[_state.game];
     const player = game.getPlayer();
     const questions = game.getAllQuestions();
     

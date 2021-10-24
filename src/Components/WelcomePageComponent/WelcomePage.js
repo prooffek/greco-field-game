@@ -2,10 +2,17 @@
 import map from "./../../img/welcom-page-map.png";
 
 import "./WelcomePage.css";
+import {_gameReducerActions, _modifiers} from "../../Utilities/_dictionaries";
 
 const WelcomePage = (props) => {
-    const changePage = () => {
-        props.setNextPage(props.currentPage + 1);
+    
+    const setState = props.setState;
+    
+    const changePage = () => { 
+        return (setState({
+            type: _gameReducerActions.setPhase, 
+            [_gameReducerActions.modifier]: _modifiers.increment
+        }));
     }
     
     return(

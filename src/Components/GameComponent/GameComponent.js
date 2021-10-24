@@ -1,5 +1,5 @@
 import {useEffect, useReducer} from "react";
-import {_modifiers, _reducerDict} from "../../Utilities/_dictionaries";
+import {_gameReducerActions, _modifiers, _reducerDict, _state} from "../../Utilities/_dictionaries";
 import MapComponent from "./../MapComponent/MapComponent";
 import QuestionPage from "./../QuestionPageComponent/QuestionPage";
 
@@ -12,6 +12,7 @@ const initGameState = {
 }
 
 export default function GameComponent(props) {
+    console.log();
     const game = props.game;
     const [gameState, setGameState] = useReducer(gameHandler, initGameState);
     
@@ -53,11 +54,19 @@ export default function GameComponent(props) {
     
     function handleGamePhase(stageIndex) {
         if (stageIndex < 0) {
-            props.setPhase(_modifiers.decrement);
+            return props.setState({
+                type: _gameReducerActions.setPhase,
+                [_gameReducerActions.modifier]: _modifiers.decrement
+            });
+            // props.setPhase(_modifiers.decrement);
         }
         
         if (stageIndex >= game.getStagesAmount()){
-            props.setPhase(_modifiers.increment);
+            return props.setState({
+                type: _gameReducerActions.setPhase,
+                [_gameReducerActions.modifier]: _modifiers.increment
+            });
+            // props.setPhase(_modifiers.increment);
         }
     }
     

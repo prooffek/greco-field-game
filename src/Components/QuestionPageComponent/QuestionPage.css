@@ -53,7 +53,7 @@
 .question-text {
     grid-column: 1 / -1;
     padding: 2vh 0;
-    font-size: 3vh;
+    font-size: 4vh;
     font-weight: bold;
 }
 
@@ -61,7 +61,7 @@
     margin-left: 2vw;
     border: 3px solid #C99750;
     border-radius: 3vw;
-    font-size: 2vh;
+    font-size: 3.7vh;
     height: 90%;
     width: 90%;
 }
@@ -75,7 +75,7 @@
 .answer-btn:hover,
 .selected-answer-btn:hover,
 .unselected-answer-btn:hover {
-    font-size: 2.5vh;
+    font-size: 3.7vh;
     font-weight: bold;
 }
 
