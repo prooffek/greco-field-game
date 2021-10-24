@@ -52,3 +52,18 @@ export const _buttonModifiers = {
     next: "increment",
     previous: "decrement"
 }
+
+export const _state = {
+    phase: "phase",
+    game: "game"
+}
+
+export const _gameReducerActions = {
+    setGame: "setGame",
+    setPhase: "setPhase",
+    game: "game",
+    phase: "phase",
+    type: "type",
+    resetGame: "resetGame",
+    modifier: "modifier"
+}
