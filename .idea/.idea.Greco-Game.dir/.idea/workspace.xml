@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76ff7dad-edc5-4a5a-b037-80a68ffc7cd7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Greco-Game.dir/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Greco-Game.dir/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Greco-Game.dir/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Greco-Game.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Greco-Game.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/GameStage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/GameStage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/GameComponent/GameComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameComponent/GameComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/QuestionPageComponent/QuestionPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/QuestionPageComponent/QuestionPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SummaryComponent/SummaryPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SummaryComponent/SummaryPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/WelcomePageComponent/WelcomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/WelcomePageComponent/WelcomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utilities/_dictionaries.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilities/_dictionaries.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utilities/_utilityFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilities/_utilityFunctions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +90,11 @@
       <workItem from="1634822613369" duration="349000" />
       <workItem from="1634823423674" duration="296000" />
       <workItem from="1634825217105" duration="1675000" />
-      <workItem from="1634829080693" duration="839000" />
+      <workItem from="1634829080693" duration="1211000" />
+      <workItem from="1634863775871" duration="350000" />
+      <workItem from="1634889731287" duration="224000" />
+      <workItem from="1634975160434" duration="14736000" />
+      <workItem from="1635106181972" duration="10910000" />
     </task>
     <servers />
   </component>
