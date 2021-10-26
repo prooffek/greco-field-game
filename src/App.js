@@ -37,7 +37,12 @@ function App() {
       return saved;
   }
   
-  console.log("state: ", state);
+  function resetGame() {
+      return {
+          game: new Game(gameName, new Player(), language),
+          phase: 0
+      }
+  }
   
   function gameReducer(prevState, action) {
     let newState;
@@ -50,7 +55,7 @@ function App() {
         newState = {...prevState, [_state.phase]: prevState[_state.phase] + action.modifier};
         break
       case _gameReducerActions.resetGame:
-        newState = initState;
+        newState = resetGame();
         break
     }
     
@@ -78,6 +83,7 @@ function App() {
           state[_state.phase] === gamePhases.summary &&
           <SummaryPage
               state={state}
+              setState={setState}
           />
         }
       </div>

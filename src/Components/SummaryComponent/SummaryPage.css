@@ -5,14 +5,14 @@
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 1fr 90%;
+    grid-template-columns: 1fr 80%;
     grid-template-rows: 100%;
 }
 
 .parchment-container,
 .summary-navigation-btn {
     align-self: center;
-    justify-self: center;
+    justify-self: flex-start;
 }
 
 .parchment-container {
@@ -104,6 +104,33 @@
 
 .incorrect-answer {
     color: darkred;
+}
+
+.summary-btns-container {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.summary-btn {
+    width: 50%;
+    min-width: 10vw;
+    height: auto;
+    min-height: 10vh;
+    padding: 1vh 1vw;
+    text-align: center;
+    background-color: #D9A658;
+    border: 2px solid #C99750;
+    border-radius: 20%;
+    font-size: 2.5vh;
+}
+
+.summary-btn:hover {
+    background-color: darkgoldenrod;
+    font-weight: bold;
+    font-size: 2.7vh;
 }
 
 @media only screen and (orientation: portrait) {

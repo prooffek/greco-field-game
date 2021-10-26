@@ -1,25 +1,24 @@
 import "./SummaryPage.css";
-import {_state} from "../../Utilities/_dictionaries";
+import {_gameReducerActions, _state} from "../../Utilities/_dictionaries";
 
 export default function SummaryPage(props) {
-    console.log("summary page");
-    
     const game = props.state[_state.game];
     const player = game.getPlayer();
     const questions = game.getAllQuestions();
     
     const isCorrect = question => question.isAnswerCorrect(player.getAnswer(question.getId()));
     
-    // const setPhase = props.setPhase;
-    // const phase = props.currentPhase
-    
-    
-    // function onClickHandler() {
-    //     setPhase(phase - 1);
-    // }
+    const resetGame = () => {
+        props.setState({
+            type: _gameReducerActions.resetGame
+        })
+    }
     
     return(
         <section className="summary-page">
+            <div className="summary-btns-container">
+                <button className="summary-btn" onClick={resetGame}>Play again</button>
+            </div>
             <div className="parchment-container">
                 <div className="result-container">
                     <h1>Your result:</h1>
