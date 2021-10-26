@@ -136,6 +136,23 @@
 @media only screen and (orientation: portrait) {
     .summary-page {
         grid-template-columns: 100%;
+        grid-template-rows: 90% 10%;
+    }
+    
+    .summary-btns-container {
+        grid-row: 2;
+    }
+    
+    .summary-btn {
+        border-radius: 5%;
+        height: 70%;
+        min-height: 5vh;
+        align-self: center;
+        margin-bottom: 1vh;
+    }
+    
+    .parchment-container {
+        justify-self: center;
     }
 
     .parchment-container {

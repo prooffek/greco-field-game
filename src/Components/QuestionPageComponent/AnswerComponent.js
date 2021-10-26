@@ -32,16 +32,18 @@ export default function AnswerComponent(props) {
     return(
         <section className="question-content-container">
             <p className="question-text">{question.getQuestionText()}</p>
-            {answers.map(a =>
-                <button
-                    key={`answer_${answers.indexOf(a)}`}
-                    className={`answer-btn ${isSelected(a) ? "selected-answer-btn" : "unselected-answer-btn"}`}
-                    name={a}
-                    onClick={answerHandler}
-                >
-                    {a}
-                </button>
-            )}
+            <div className="answers-container" >
+                {answers.map(a =>
+                    <button
+                        key={`answer_${answers.indexOf(a)}`}
+                        className={`answer-btn ${isSelected(a) ? "selected-answer-btn" : "unselected-answer-btn"}`}
+                        name={a}
+                        onClick={answerHandler}
+                    >
+                        {a}
+                    </button>
+                )}
+            </div>
         </section>
     );
 }

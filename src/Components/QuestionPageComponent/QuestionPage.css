@@ -45,16 +45,21 @@
 
 .question-content-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
     padding: 1.5vh 5vw;
 }
 
 .question-text {
-    grid-column: 1 / -1;
     padding: 2vh 0;
     font-size: 4vh;
     font-weight: bold;
+}
+
+.answers-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .answer-btn {
@@ -64,6 +69,7 @@
     font-size: 3.7vh;
     height: 90%;
     width: 90%;
+    padding: 1.5vh 1vw;
 }
 
 .selected-answer-btn,
@@ -131,7 +137,8 @@
 }
 
 @media only screen and (orientation: portrait) {
-    .navigation-btn {
+    .navigation-btn,
+    .answer-btn {
         font-size: 2vh;
     }
 
