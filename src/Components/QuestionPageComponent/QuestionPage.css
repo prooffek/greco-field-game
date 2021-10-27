@@ -46,7 +46,7 @@
 .question-content-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: auto 1fr;
     padding: 1.5vh 5vw;
 }
 
@@ -54,6 +54,7 @@
     padding: 2vh 0;
     font-size: 4vh;
     font-weight: bold;
+    min-height: 35vh;
 }
 
 .answers-container {
@@ -138,7 +139,9 @@
 
 @media only screen and (orientation: portrait) {
     .navigation-btn,
-    .answer-btn {
+    .answer-btn,
+    .answer-btn:hover,
+    .answer-btn:active {
         font-size: 2vh;
     }
 
