@@ -21,8 +21,7 @@ export default function SummaryPage(props) {
             </div>
             <div className="parchment-container">
                 <div className="result-container">
-                    <h1>Your result:</h1>
-                    <p>{player.getScore()}</p>
+                    <h1>Your result: {"\t\t"} {player.getScore()}</h1>
                 </div>
                     <div className="summary-table scrollable">
                         {questions.map(question => 
