@@ -1,12 +1,13 @@
 import './App.css';
 import {Game} from "./Classes/Game";
-import {useEffect, useReducer} from "react";
+import {useReducer} from "react";
 import GameComponent from "./Components/GameComponent/GameComponent";
 import WelcomePage from "./Components/WelcomePageComponent/WelcomePage";
 import SummaryPage from "./Components/SummaryComponent/SummaryPage";
 import {_gameNamesDict, _gameReducerActions, _languages, _state} from "./Utilities/_dictionaries";
 import {Player} from "./Classes/Player";
 import {parsToGameObject} from "./Utilities/_utilityFunctions";
+import "./NavButtons.css"
 
 const gamePhases = {
   welcomePage: 0,
