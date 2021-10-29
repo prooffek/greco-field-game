@@ -15,29 +15,6 @@
     height: 60vh;
 }
 
-.start-btn {
-    height: 10vh;
-    width: 40vw;
-    padding: 0.5vh 2vw;
-    background-color: seagreen;
-    border: 5px solid mediumseagreen;
-    border-radius: 30px;
-    color: wheat;
-    font-size: 6vh;
-}
-
-.start-btn:hover {
-    background-color: forestgreen;
-    font-size: 6.5vh;
-    font-weight: bold;
-}
-
-.start-btn:active {
-    background-color: aquamarine;
-    border: 5px solid seagreen;
-    color: seagreen;
-}
-
 @media only screen and (orientation: portrait) {
     .welcome-page-header {
         width: 100%;
@@ -46,7 +23,7 @@
     }
 
     .welcome-page-map {
-        width: 95%;
+        width: 100%;
         height: auto;
         max-height: 60vh;
     }

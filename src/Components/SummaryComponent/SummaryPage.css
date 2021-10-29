@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-bottom: 2vh;
+    padding-bottom: 5vh;
 }
 
 .summary-navigation-btn {
@@ -46,11 +46,18 @@
 .result-container h1 {
     font-weight: 1500;
     margin-bottom: 2vh;
+    text-transform: uppercase;
 }
 
 .result-container p {
     font-weight: 1500;
-    color: #9e0000;
+    color: white;
+    border: 3px solid #9e0000;
+    background-color: #9e0000;
+    border-radius: 50%;
+    width: 5vw;
+    height: auto;
+    align-self: center;
 }
 
 .summary-table {
@@ -69,15 +76,16 @@
     margin-right: 1vw;
 }
 
-.summary-table h2, h3 {
-    margin-left: 2vw;
-    margin-bottom: 2vh;
+.summary-table h2, h3, p, p span {
+    margin: 0 2vw 2vh 5vw;
+    
 }
 
 .summary-table h2 {
-    font-size: 5vh;
+    font-size: 4vh;
     text-decoration: underline;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .summary-table h3 {
@@ -121,14 +129,15 @@
     min-height: 10vh;
     padding: 1vh 1vw;
     text-align: center;
-    background-color: #D9A658;
+    background-color: rgba(255, 210, 141, 0.8);
     border: 2px solid #C99750;
     border-radius: 20%;
     font-size: 2.5vh;
 }
 
 .summary-btn:hover {
-    background-color: darkgoldenrod;
+    background-color: #D9A658;
+    /*background-color: darkgoldenrod;*/
     font-weight: bold;
     font-size: 2.7vh;
 }

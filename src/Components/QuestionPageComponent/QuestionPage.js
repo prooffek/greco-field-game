@@ -16,9 +16,9 @@ export default function QuestionPage(props) {
                 player={player}
                 question={question}
             />
-            <section className="navigation-btns-container">
-                <button className="navigation-btn" name={_buttonModifiers.previous} onClick={setGameState}>Previous page</button>
-                <button className="navigation-btn" name={_buttonModifiers.next} onClick={setGameState}>Next page</button>
+            <section className="nav-btns-container">
+                <button className="nav-btn question-nav-btn" name={_buttonModifiers.previous} onClick={setGameState}>Previous page</button>
+                <button className="nav-btn question-nav-btn" name={_buttonModifiers.next} onClick={setGameState}>Next page</button>
             </section>
         </div>
     )
