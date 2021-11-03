@@ -1,0 +1,40 @@
+{
+  "EN": {
+    "start": "Start",
+    "onSpot": "I'm on the spot!",
+    "nextPage": "Next page",
+    "prevPage": "Previous Page",
+    "back": "One step back",
+    "question": "Question",
+    "result": "Your result",
+    "playAgain": "Play again",
+    "correctAnswer": "Correct answer",
+    "yourAnswer": "Your answer"
+  },
+  
+  "PL": {
+    "start": "Start",
+    "onSpot": "Na miejscu!",
+    "nextPage": "Dalej",
+    "prevPage": "Wstecz",
+    "back": "Krok w tył",
+    "question": "Pytanie",
+    "result": "Twój wynik",
+    "playAgain": "Zagraj znowu",
+    "correctAnswer": "Poprawna",
+    "yourAnswer": "Twoja"
+  },
+  
+  "EL": {
+    "start": "Έναρξη",
+    "onSpot": "Έφτασα",
+    "nextPage": "Συνέχεια",
+    "prevPage": "Πίσω",
+    "back": "Πίσω",
+    "question": "Ερώτηση",
+    "result": "Το αποτέλεσμά σου",
+    "playAgain": "Παίξε ξανά!",
+    "correctAnswer": "Σωστή απάντηση",
+    "yourAnswer": "Η απάντησή σου"
+  }
+}

@@ -14,6 +14,7 @@ const initGameState = {
 export default function GameComponent(props) {
     console.log();
     const game = props.game;
+    const language = props.language;
     const [gameState, setGameState] = useReducer(gameHandler, initGameState);
     
     useEffect(() => {
@@ -84,6 +85,7 @@ export default function GameComponent(props) {
                 <MapComponent
                     map={game.getStage(gameState.stageIndex).getMap()}
                     setGameState={onClickHandler}
+                    language={language}
                 />
             }
             {
@@ -92,6 +94,7 @@ export default function GameComponent(props) {
                     question={game.getStage(gameState.stageIndex).getQuestionObj(gameState.questionIndex)}
                     setGameState={onClickHandler}
                     player={game.getPlayer()}
+                    language={language}
                 />
             }
         </div>

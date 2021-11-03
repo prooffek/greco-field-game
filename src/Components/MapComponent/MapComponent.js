@@ -4,6 +4,9 @@ import {_buttonModifiers} from "../../Utilities/_dictionaries";
 const MapComponent = (props) => {
     const mapName = props.map;
     const setGameState = props.setGameState;
+    const language = props.language;
+    
+    console.log(language);
     
     return (
         <section className="video-page-container">
@@ -11,8 +14,8 @@ const MapComponent = (props) => {
                 <source src={mapName} type="video/mp4" />
             </video>
             <section className="nav-btns-container map-nav-btns-container">
-                <button className="nav-btn on-map-btn" name={_buttonModifiers.previous} onClick={setGameState}>One step back</button>
-                <button className="nav-btn on-map-btn" name={_buttonModifiers.next} onClick={setGameState}>I'm on the spot!</button>
+                <button className="nav-btn on-map-btn" name={_buttonModifiers.previous} onClick={setGameState}>{language.back}</button>
+                <button className="nav-btn on-map-btn" name={_buttonModifiers.next} onClick={setGameState}>{language.onSpot}</button>
             </section>
         </section>
         

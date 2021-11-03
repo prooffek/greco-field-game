@@ -66,11 +66,20 @@ export class Game {
         return questions;
     }
     
+    getLanguage() {
+        return this.#language;
+    }
+    
+    setLanguage(language){
+        this.#language = language;
+    }
+    
     getObject() {
         return {
             gameName: this.#gameName,
             player: this.#player.getObject(),
-            stages: [...this.#stages.map(stage => stage.getObject())]
+            stages: [...this.#stages.map(stage => stage.getObject())],
+            language: this.#language
         };
     }
 }

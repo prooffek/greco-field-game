@@ -6,19 +6,20 @@ export default function QuestionPage(props) {
     const question = props.question;
     const player = props.player;
     const setGameState = props.setGameState;
+    const language = props.language;
 
     return (
         <div className="question-page-container fixed-page-container">
             <nav className="side-navbar-through-pages"/>
             <header className="question-page-header" />
-            <h2 className="question-title">Question {question.getId() + 1}:</h2>
+            <h2 className="question-title">{language.question} {question.getId() + 1}:</h2>
             <AnswerComponent
                 player={player}
                 question={question}
             />
             <section className="nav-btns-container">
-                <button className="nav-btn question-nav-btn" name={_buttonModifiers.previous} onClick={setGameState}>Previous page</button>
-                <button className="nav-btn question-nav-btn" name={_buttonModifiers.next} onClick={setGameState}>Next page</button>
+                <button className="nav-btn question-nav-btn" name={_buttonModifiers.previous} onClick={setGameState}>{language.prevPage}</button>
+                <button className="nav-btn question-nav-btn" name={_buttonModifiers.next} onClick={setGameState}>{language.nextPage}</button>
             </section>
         </div>
     )

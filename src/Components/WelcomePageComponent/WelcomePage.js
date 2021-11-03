@@ -3,9 +3,10 @@ import map from "./../../img/welcom-page-map.png";
 
 import "./WelcomePage.css";
 import {_gameReducerActions, _modifiers} from "../../Utilities/_dictionaries";
+import LanguagesBar from "./LanguagesBar";
 
 const WelcomePage = (props) => {
-    
+    const language = props.language;
     const setState = props.setState;
     
     const changePage = () => { 
@@ -17,9 +18,12 @@ const WelcomePage = (props) => {
     
     return(
         <div className="welcome-page fixed-page-container">
+            <LanguagesBar
+                setState={setState}
+            />
             <img className="welcome-page-header" src={header} alt="welcome-page-header" />
             <img className="welcome-page-map" src={map} alt="welcome-page-map" />
-            <button type="button" onClick={changePage} className="nav-btn start-btn">Start</button>
+            <button type="button" onClick={changePage} className="nav-btn start-btn">{language.start}</button>
         </div>
     )
 }

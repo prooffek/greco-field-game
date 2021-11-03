@@ -16,7 +16,9 @@ export const _gameNamesDict = {
 
 export const _languages = {
     english: "EN",
-    italian: "IT"
+    italian: "IT",
+    polish: "PL",
+    greek: "EL"
 }
 
 export const _mapImports = {
@@ -61,6 +63,7 @@ export const _state = {
 export const _gameReducerActions = {
     setGame: "setGame",
     setPhase: "setPhase",
+    setLanguage: "setLanguage",
     game: "game",
     phase: "phase",
     type: "type",

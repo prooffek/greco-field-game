@@ -1,6 +1,6 @@
 import './App.css';
 import {Game} from "./Classes/Game";
-import {useReducer} from "react";
+import {useReducer, useState} from "react";
 import GameComponent from "./Components/GameComponent/GameComponent";
 import WelcomePage from "./Components/WelcomePageComponent/WelcomePage";
 import SummaryPage from "./Components/SummaryComponent/SummaryPage";
@@ -8,6 +8,7 @@ import {_gameNamesDict, _gameReducerActions, _languages, _state} from "./Utiliti
 import {Player} from "./Classes/Player";
 import {parsToGameObject} from "./Utilities/_utilityFunctions";
 import "./NavButtons.css"
+import languages from "./_jsonFiles/LanguageDictionaries/_dictionary.json"
 
 const gamePhases = {
   welcomePage: 0,
@@ -17,10 +18,9 @@ const gamePhases = {
 
 const gameName = _gameNamesDict.Italy.Gaddiciano;
 const newPlayer = new Player();
-const language = _languages.english;
 
 const initState = {
-  [_state.game]: new Game(gameName, newPlayer, language),
+  [_state.game]: new Game(gameName, newPlayer, _languages.polish),
   [_state.phase]: gamePhases.welcomePage
 }
 
@@ -38,7 +38,7 @@ function App() {
       return saved;
   }
   
-  function resetGame() {
+  function resetGame(language) {
       return {
           game: new Game(gameName, new Player(), language),
           phase: 0
@@ -51,16 +51,21 @@ function App() {
     switch (action.type) {
       case _gameReducerActions.setGame:
         newState = {...prevState, [_state.game]: action.game};
-        break
+        break;
       case _gameReducerActions.setPhase:
         newState = {...prevState, [_state.phase]: prevState[_state.phase] + action.modifier};
-        break
+        break;
+      case _gameReducerActions.setLanguage:
+        let game = prevState[_state.game];
+        game.setLanguage(action.language)
+        newState = {...prevState, [_state.game]: game};
+        break;
       case _gameReducerActions.resetGame:
-        newState = resetGame();
-        break
+        newState = resetGame(prevState[_state.game].getLanguage());
+        break;
     }
     
-    localStorage.setItem(newState.game.getName(), JSON.stringify({game: newState.game.getObject(), phase: newState.phase}));
+    localStorage.setItem(newState.game.getName(), JSON.stringify({game: newState[_state.game].getObject(), phase: newState.phase}));
     return newState;
   }
   
@@ -71,6 +76,7 @@ function App() {
           <WelcomePage
               setState={setState}
               currentPhase={state[_state.phase]}
+              language={languages[state.game.getLanguage()]}
           />
         }
         {
@@ -78,6 +84,7 @@ function App() {
           <GameComponent
               game={state[_state.game]}
               setState={setState}
+              language={languages[state.game.getLanguage()]}
           />
         }
         {
@@ -85,6 +92,7 @@ function App() {
           <SummaryPage
               state={state}
               setState={setState}
+              language={languages[state.game.getLanguage()]}
           />
         }
       </div>
