@@ -17,9 +17,9 @@ export class Game {
         this.#stages = stages === null ? this.setStages(gameName) : stages;
     }
     
-    setStages(gameName) {
+    setStages(gameName, language=this.#language) {
         const stages = [];
-        const questions = _loadFile(_places[gameName], _targetFolders.questions, this.#language)
+        const questions = _loadFile(_places[gameName], _targetFolders.questions, language)
         
         for (let i = 0; i <= getStagesNumber(questions); i++) {
             stages.push(
@@ -72,6 +72,8 @@ export class Game {
     
     setLanguage(language){
         this.#language = language;
+        const questions = _loadFile(_places[this.#gameName], _targetFolders.questions, language);
+        this.#stages.map(stage => stage.updateLanguage(questions))
     }
     
     getObject() {

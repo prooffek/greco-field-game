@@ -6,8 +6,6 @@ const MapComponent = (props) => {
     const setGameState = props.setGameState;
     const language = props.language;
     
-    console.log(language);
-    
     return (
         <section className="video-page-container">
             <video className="video-background-container" autoPlay loop muted >

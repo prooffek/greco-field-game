@@ -76,7 +76,8 @@ function App() {
           <WelcomePage
               setState={setState}
               currentPhase={state[_state.phase]}
-              language={languages[state.game.getLanguage()]}
+              words={languages[state.game.getLanguage()]}
+              language={state.game.getLanguage()}
           />
         }
         {

@@ -1,3 +1,5 @@
+import {_loadFile} from "../fileLoader/fileLoader";
+
 export class GameStage {
     #index;
     #map;
@@ -34,5 +36,9 @@ export class GameStage {
             map: this.#map,
             questions: [...this.#questions.map(question => question.getObject())]
         };
+    }
+    
+    updateLanguage(newQuestions) {
+        this.#questions.map(question => question.updateLanguage(newQuestions))
     }
 }

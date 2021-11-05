@@ -50,6 +50,12 @@ export class Question {
     getAnswersList() {
         return this.#answersList;
     }
+    
+    updateLanguage(questions) {
+        const question = questions.filter(question => question.getId() === this.#id)[0];
+        this.#text = question.getQuestionText();
+        this.#correctAnswer = question.getCorrectAnswer();
+    }
 
     getObject() {
         return {
