@@ -10,6 +10,8 @@
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://cra.link/PWA
 
+import {skipWaiting} from "workbox-core";
+
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
     // [::1] is the IPv6 localhost address.
@@ -75,7 +77,9 @@ function registerValidSW(swUrl, config) {
               // Execute callback
               if (config && config.onUpdate) {
                 config.onUpdate(registration);
+                window.location.reload();
               }
+              skipWaiting();
             } else {
               // At this point, everything has been precached.
               // It's the perfect time to display a
