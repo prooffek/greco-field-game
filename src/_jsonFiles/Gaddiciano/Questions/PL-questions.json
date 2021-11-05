@@ -2,61 +2,61 @@
   {
     "id": 0,
     "text": "Jak nazywa się ulica prowadząca do wioski Gaḍḍicianò w Grèko?",
-    "correctAnswer": "Dròmo Patrùna ti Grècia (Street of the Madonna of Greece)",
+    "correctAnswer": "Dròmo Patrùna ti Grècia (Ulica Matki Boskiej Greckiej)",
     "stage": 0
   },
   {
     "id": 1,
-    "text": "Choose non-Italian names of the central square of the village.",
+    "text": "Wybierz jakie są niewłoskie nazwy głównego placu w wiosce.",
     "correctAnswer": "Ròcca tu Coràcu, \nKiàzza Àlimos, \nPlatìa Àlimos",
     "stage": 1
   },
   {
     "id": 2,
-    "text": "Whose name bears the Ethnographioc Museum and why?",
+    "text": "Czyje imię nosi Muzeum Etnograficzne?",
     "correctAnswer": "Angela Bogasari Merianoù / Anzel Merianoù",
     "stage": 2
   },
   {
     "id": 3,
-    "text": "Entering the Ethnographic Museum write down your name in the book and find there what was transported in a bagpipe from the village to the seaside - what is the Grèko name of the goods?",
-    "correctAnswer": "Crasì / Krasì (wine) \nAlealàdi (olive oil)",
+    "text": "Wchodząc do Muzeum Etnograficznego wpisz się do książki pamiątkowej i znajdź w niej, co miejscowa ludność transportowała w dudach na wybrzerze. Jak ten produkt nazywa się w Grèko?",
+    "correctAnswer": "Crasì / Krasì (wino) \nAlealàdi (oliwa z oliwek)",
     "stage": 2
   },
   {
     "id": 4,
-    "text": "What is the Grèko name of the fountain?",
-    "correctAnswer": "Cànnalo tis Agàpi (The Fountain of Love)",
+    "text": "Jaką źródełko nazywa się w Grèko?",
+    "correctAnswer": "Cànnalo tis Agàpi (Źródełko miłości)",
     "stage": 3
   },
   {
     "id": 5,
-    "text": "Walk up to the top of the Greek Amphitheatre of Bartholomeo I. What river valley do you see?",
+    "text": "Podejdź na szczyt greckiego amfiteatru im. Bartholomeo I. Dolinę jakiej rzeki stamtąd widać?",
     "correctAnswer": "Amandolea",
     "stage": 4
   },
   {
     "id": 6,
-    "text": "What should you do 3 times when entering the Orthodox Church of the Madonna of Greece (Panaghìa tis Ellàdas)?",
-    "correctAnswer": "Cudunìzo (to ring the bell)",
+    "text": "Co należy zrobić trzy razy wchodząc do prawosławnego kościołu pw. Matki Boskiej Greckiej (Panaghìa tis Ellàdas)?",
+    "correctAnswer": "Cudunìzo (zadzwonić dzwonkiem)",
     "stage": 5
   },
   {
     "id": 7,
-    "text": "The white marble slab near St. John the Baptist Church presents a text in 2 languages. What are these languages?",
-    "correctAnswer": "Greek and Italian",
+    "text": "Na marmurowej tablicy w pobliżu kościoła pw. św. Jana Chrzciciela widnieje napis w dwóch językach. Jakich?",
+    "correctAnswer": "Grecki i włoski",
     "stage": 6
   },
   {
     "id": 8,
-    "text": "What is the Grèko name of the street you are going down from St. John the Baptist Church to the exhibition of old agricultural machinery?",
-    "correctAnswer": "Stenò Àghio Nìlo (Saint Nilus Street)",
+    "text": "Jak nazywa się w Grèko ulica ciągnąca się w dół od kościołu pw. św. Jana Chrzciciela do wystawy starych narzędzi rolniczych?",
+    "correctAnswer": "Stenò Àghio Nìlo (Ulica św. Nila)",
     "stage": 6
   },
   {
     "id": 9,
-    "text": "What is the Grèko name of the machinery mention in the previous question?",
-    "correctAnswer": "Palei mìli ton alèo (Archaic olive mills)",
+    "text": "Jak nazywają się w Grèko narzędzia rolnicze wspomnianych w poprzednim pytaniu?",
+    "correctAnswer": "Palei mìli ton alèo (Stara prasa do wytłaczania oliwy)",
     "stage": 7
   }
 ]

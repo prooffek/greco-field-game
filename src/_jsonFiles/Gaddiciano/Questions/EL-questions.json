@@ -1,19 +1,19 @@
 [
   {
     "id": 0,
-    "text": "What is the Grèko name for the street leading to the village of Gaḍḍicianò?",
-    "correctAnswer": "Dròmo Patrùna ti Grècia (Street of the Madonna of Greece)",
+    "text": "Πώς λέγεται στα γκρεκάνικα η οδός προς το χωριό Γκαντντιτσιανό;",
+    "correctAnswer": "Dròmo Patrùna ti Grècia (η οδός της Παναγιάς της Ελλάδος)",
     "stage": 0
   },
   {
     "id": 1,
-    "text": "Choose non-Italian names of the central square of the village.",
+    "text": "Ποιες είναι οι μη ιταλικές ονομασίες της κύριας πλατείας στο χωριό;",
     "correctAnswer": "Ròcca tu Coràcu, \nKiàzza Àlimos, \nPlatìa Àlimos",
     "stage": 1
   },
   {
     "id": 2,
-    "text": "Whose name bears the Ethnographioc Museum and why?",
+    "text": "Ποιανού όνομα φέρει το Εθνικό Μουσείο στο χωριό;",
     "correctAnswer": "Angela Bogasari Merianoù / Anzel Merianoù",
     "stage": 2
   },
