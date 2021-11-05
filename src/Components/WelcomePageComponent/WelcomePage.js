@@ -8,6 +8,7 @@ import LanguagesBar from "./LanguagesBar";
 const WelcomePage = (props) => {
     const language = props.language;
     const setState = props.setState;
+    const words = props.words
     
     const changePage = () => { 
         return (setState({
@@ -20,10 +21,11 @@ const WelcomePage = (props) => {
         <div className="welcome-page fixed-page-container">
             <LanguagesBar
                 setState={setState}
+                language={language}
             />
             <img className="welcome-page-header" src={header} alt="welcome-page-header" />
             <img className="welcome-page-map" src={map} alt="welcome-page-map" />
-            <button type="button" onClick={changePage} className="nav-btn start-btn">{language.start}</button>
+            <button type="button" onClick={changePage} className="nav-btn start-btn">{words.start}</button>
         </div>
     )
 }

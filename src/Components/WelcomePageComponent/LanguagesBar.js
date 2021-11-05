@@ -8,21 +8,50 @@ const notImplemented = [_languages.italian]
 
 export default function LanguagesBar(props) {
     const setState = props.setState;
+    const language = props.language;
     
     function clickHandler(event) {
         const clicked = event.target.name;
         return (setState({
             type: _gameReducerActions.setLanguage,
-            language: notImplemented.includes(clicked) ? _languages.english : clicked
+            language: notImplemented.includes(clicked) ? language : clicked
         }));
+    }
+    
+    const btnClassName = (btnLanguage) => {
+        return btnLanguage === language ? "selected-flag" : "not-selected-flag"
     }
     
     return(
         <div className="flags-container">
-            <img src={EN} alt="EN-map" className="flag" name={_languages.english} onClick={clickHandler}/>
-            <img src={PL} alt="PL-map" className="flag" name={_languages.polish} onClick={clickHandler}/>
-            <img src={EL} alt="PL-map" className="flag" name={_languages.greek} onClick={clickHandler}/>
-            <img src={IT} alt="IT-map" className="flag" name={_languages.italian} onClick={clickHandler}/>
+            <img 
+                src={EN} 
+                alt="EN-map" 
+                className={`flag ${btnClassName(_languages.english)}`} 
+                name={_languages.english} 
+                onClick={clickHandler}
+            />
+            <img 
+                src={PL} 
+                alt="PL-map"
+                className={`flag ${btnClassName(_languages.polish)}`} 
+                name={_languages.polish} 
+                onClick={clickHandler}
+            />
+            <img 
+                src={EL} 
+                alt="PL-map"
+                className={`flag ${btnClassName(_languages.greek)}`} 
+                name={_languages.greek} 
+                onClick={clickHandler}
+            />
+            <img 
+                src={IT} 
+                alt="IT-map"
+                className={`flag ${btnClassName(_languages.italian)}`} 
+                name={_languages.italian} 
+                onClick={clickHandler}
+            />
         </div>
     )
 }
