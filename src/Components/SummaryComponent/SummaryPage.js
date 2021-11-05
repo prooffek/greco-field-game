@@ -22,7 +22,8 @@ export default function SummaryPage(props) {
             </div>
             <div className="parchment-container">
                 <div className="result-container">
-                    <h1>{language.result}: {player.getScore()}</h1>
+                    <h1>{language.result}:</h1>
+                    <p className="player-score">{player.getScore()}</p>
                 </div>
                     <div className="summary-table scrollable">
                         {questions.map(question => 
@@ -35,14 +36,18 @@ export default function SummaryPage(props) {
                                         <span className="correct-answer">
                                             {language.correctAnswer}: 
                                         </span> 
-                                        {question.getCorrectAnswer()}
+                                        <span className="answer-text">
+                                            {question.getCorrectAnswer()}
+                                        </span>
                                     </p>
                                 }
                                 <p>
                                     <span className={isCorrect(question) ? "correct-answer" : "incorrect-answer"}>
                                         {language.yourAnswer}: 
                                     </span>
-                                    {player.getAnswer(question.getId())}
+                                    <span className="answer-text">
+                                        {player.getAnswer(question.getId())}
+                                    </span>
                                 </p>
                             </div>
                         )}
