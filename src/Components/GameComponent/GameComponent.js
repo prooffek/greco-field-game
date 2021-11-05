@@ -12,7 +12,6 @@ const initGameState = {
 }
 
 export default function GameComponent(props) {
-    console.log();
     const game = props.game;
     const language = props.language;
     const [gameState, setGameState] = useReducer(gameHandler, initGameState);
@@ -59,7 +58,6 @@ export default function GameComponent(props) {
                 type: _gameReducerActions.setPhase,
                 [_gameReducerActions.modifier]: _modifiers.decrement
             });
-            // props.setPhase(_modifiers.decrement);
         }
         
         if (stageIndex >= game.getStagesAmount()){
@@ -67,7 +65,6 @@ export default function GameComponent(props) {
                 type: _gameReducerActions.setPhase,
                 [_gameReducerActions.modifier]: _modifiers.increment
             });
-            // props.setPhase(_modifiers.increment);
         }
     }
     

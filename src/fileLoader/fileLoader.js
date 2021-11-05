@@ -16,13 +16,13 @@ export function _loadFile(place=_places[_gameNamesDict.Italy.Gaddiciano], dataTy
         case _targetFolders.questions:
             return loadQuestions();
         case _targetFolders.wrongAnswers:
-            return loadListFromFile(targetFolder)
+            return loadWrongAnswers(targetFolder)
         default:
             return [];
     }
 } 
 
-function loadListFromFile(targetFolder) {
+function loadWrongAnswers(targetFolder) {
     return require(`../_jsonFiles/${placeName}/${targetFolder}/${lang}-wrong-answers.json`)
 }
 
@@ -36,7 +36,7 @@ function loadQuestions() {
                 question.text, 
                 question.correctAnswer, 
                 question.stage,
-                loadListFromFile(_targetFolders.wrongAnswers)));
+                loadWrongAnswers(_targetFolders.wrongAnswers)));
     }
     
     return questions;

@@ -1,5 +1,8 @@
 import {getRandomEl, shuffleList} from "../Utilities/_utilityFunctions";
 
+const WRONG_ANSWERS_NUM = 3;
+const FINAL_ANSWERS_NUM = 4;
+
 export class Question {
     #id;
     #text;
@@ -36,10 +39,10 @@ export class Question {
     }
     
     setAnswersList(answers) {
-        if (answers.length === 4 && answers.includes(this.#correctAnswer))
+        if (answers.length === FINAL_ANSWERS_NUM && answers.includes(this.#correctAnswer))
             return answers;
         
-        let answersList = [this.#correctAnswer, ...getRandomEl(3, answers)]
+        let answersList = [this.#correctAnswer, ...getRandomEl(WRONG_ANSWERS_NUM, answers)]
         shuffleList(answersList);
         return answersList;
     }
