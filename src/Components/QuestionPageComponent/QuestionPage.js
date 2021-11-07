@@ -7,6 +7,7 @@ export default function QuestionPage(props) {
     const player = props.player;
     const setGameState = props.setGameState;
     const language = props.language;
+    const setMainState = props.setMainState;
 
     return (
         <div className="question-page-container fixed-page-container">
@@ -16,6 +17,7 @@ export default function QuestionPage(props) {
             <AnswerComponent
                 player={player}
                 question={question}
+                setMainState={setMainState}
             />
             <section className="nav-btns-container">
                 <button className="nav-btn question-nav-btn" name={_buttonModifiers.previous} onClick={setGameState}>{language.prevPage}</button>

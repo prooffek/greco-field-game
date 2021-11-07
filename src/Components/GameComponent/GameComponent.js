@@ -14,6 +14,7 @@ const initGameState = {
 export default function GameComponent(props) {
     const game = props.game;
     const language = props.language;
+    const setState = props.setState;
     const [gameState, setGameState] = useReducer(gameHandler, initGameState);
     
     useEffect(() => {
@@ -54,14 +55,14 @@ export default function GameComponent(props) {
     
     function handleGamePhase(stageIndex) {
         if (stageIndex < 0) {
-            return props.setState({
+            return setState({
                 type: _gameReducerActions.setPhase,
                 [_gameReducerActions.modifier]: _modifiers.decrement
             });
         }
         
         if (stageIndex >= game.getStagesAmount()){
-            return props.setState({
+            return setState({
                 type: _gameReducerActions.setPhase,
                 [_gameReducerActions.modifier]: _modifiers.increment
             });
@@ -92,6 +93,7 @@ export default function GameComponent(props) {
                     setGameState={onClickHandler}
                     player={game.getPlayer()}
                     language={language}
+                    setMainState={setState}
                 />
             }
         </div>

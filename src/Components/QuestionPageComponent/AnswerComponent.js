@@ -1,25 +1,29 @@
 import {useState} from "react";
+import {_gameReducerActions} from "../../Utilities/_dictionaries";
 
 export default function AnswerComponent(props) {
     const question = props.question;
     const player = props.player;
+    const setMainState = props.setMainState;
     const answers = question.getAnswersList();
     
     const [selectedAnswer, setSelectedAnswer] = useState(player.getAnswer(question.getId()));
     
     const answerHandler = (event) => {
         event.preventDefault();
-        
         const selected = parseInt(event.target.value, 10);
+        const selectedAnswer = {
+            questionId: question.getId(),
+            isCorrect: question.isAnswerCorrect(selected),
+            answerId: selected
+        }
         
-        player.addAnswer({
-                questionId: question.getId(), 
-                isCorrect: question.isAnswerCorrect(selected),
-                answerId: selected
-            }
-        );
-        
+        player.addAnswer(selectedAnswer);
         setSelectedAnswer(selected);
+        setMainState({
+            type: _gameReducerActions.setAnswers,
+            [_gameReducerActions.answer]: selectedAnswer
+        })
     }
     
     const isSelected = (answer) => {

@@ -47,6 +47,7 @@ function App() {
   
   function gameReducer(prevState, action) {
     let newState;
+    let game;
     
     switch (action.type) {
       case _gameReducerActions.setGame:
@@ -56,8 +57,13 @@ function App() {
         newState = {...prevState, [_state.phase]: prevState[_state.phase] + action.modifier};
         break;
       case _gameReducerActions.setLanguage:
-        let game = prevState[_state.game];
+        game = prevState[_state.game];
         game.setLanguage(action.language)
+        newState = {...prevState, [_state.game]: game};
+        break;
+      case _gameReducerActions.setAnswers:
+        game = prevState[_state.game];
+        game.getPlayer().addAnswer(action.answer)
         newState = {...prevState, [_state.game]: game};
         break;
       case _gameReducerActions.resetGame:

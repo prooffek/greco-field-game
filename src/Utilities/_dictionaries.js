@@ -64,9 +64,11 @@ export const _gameReducerActions = {
     setGame: "setGame",
     setPhase: "setPhase",
     setLanguage: "setLanguage",
+    setAnswers: "setAnswers",
     game: "game",
     phase: "phase",
     type: "type",
     resetGame: "resetGame",
-    modifier: "modifier"
+    modifier: "modifier",
+    answer: "answer"
 }
