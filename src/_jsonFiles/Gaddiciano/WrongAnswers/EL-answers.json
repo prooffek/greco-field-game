@@ -1,0 +1,127 @@
+[
+  {
+    "id": 0,
+    "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
+    "text": "απάντηση 1"
+  },
+  {
+    "id": 1,
+    "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
+    "text": "απάντηση 2"
+  },
+  {
+    "id": 2,
+    "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
+    "text": "απάντηση 3"
+  },
+  {
+    "id": 3,
+    "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
+    "text": "απάντηση 4"
+  },
+  {
+    "id": 4,
+    "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
+    "text": "απάντηση 5"
+  },
+  {
+    "id": 5,
+    "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
+    "text": "απάντηση 6"
+  },
+  {
+    "id": 6,
+    "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
+    "text": "απάντηση 7"
+  },
+  {
+    "id": 7,
+    "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
+    "text": "απάντηση 8"
+  },
+  {
+    "id": 8,
+    "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
+    "text": "απάντηση 9"
+  },
+  {
+    "id": 9,
+    "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
+    "text": "απάντηση 10"
+  },
+  {
+    "id": 10,
+    "questionId": [7],
+    "text": "απάντηση 11"
+  },
+  {
+    "id": 11,
+    "questionId": [7],
+    "text": "απάντηση 12"
+  },
+  {
+    "id": 12,
+    "questionId": [7],
+    "text": "απάντηση 13"
+  },
+  {
+    "id": 13,
+    "questionId": [7],
+    "text": "απάντηση 14"
+  },
+  {
+    "id": 14,
+    "questionId": [7],
+    "text": "απάντηση 15"
+  },
+  {
+    "id": 15,
+    "questionId": [0],
+    "text": "Dròmo Patrùna ti Grècia (Ulica Matki Boskiej Greckiej)"
+  },
+  {
+    "id": 16,
+    "questionId": [1],
+    "text": "Ròcca tu Coràcu, \nKiàzza Àlimos, \nPlatìa Àlimos"
+  },
+  {
+    "id": 17,
+    "questionId": [2],
+    "text": "Angela Bogasari Merianoù / Anzel Merianoù"
+  },
+  {
+    "id": 18,
+    "questionId": [3],
+    "text": "Crasì / Krasì (wine) \nAlealàdi (olive oil)"
+  },
+  {
+    "id": 19,
+    "questionId": [4],
+    "text": "Cànnalo tis Agàpi (The Fountain of Love)"
+  },
+  {
+    "id": 20,
+    "questionId": [5],
+    "text": "Amandolea"
+  },
+  {
+    "id": 21,
+    "questionId": [6],
+    "text": "Cudunìzo (to ring the bell)"
+  },
+  {
+    "id": 22,
+    "questionId": [7],
+    "text": "Greek and Italian"
+  },
+  {
+    "id": 23,
+    "questionId": [8],
+    "text": "Stenò Àghio Nìlo (Saint Nilus Street)"
+  },
+  {
+    "id": 24,
+    "questionId": [9],
+    "text": "Palei mìli ton alèo (Archaic olive mills)"
+  }
+]
