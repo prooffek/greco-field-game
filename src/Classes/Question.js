@@ -1,4 +1,6 @@
 import {getRandomEl, shuffleList} from "../Utilities/_utilityFunctions";
+import {_loadFile} from "../fileLoader/fileLoader";
+import {_targetFolders} from "../Utilities/_dictionaries";
 
 const WRONG_ANSWERS_NUM = 3;
 const FINAL_ANSWERS_NUM = 4;
@@ -61,9 +63,11 @@ export class Question {
         return this.#answersList;
     }
     
-    updateLanguage(questions) {
+    updateLanguage(questions, answers) {
         const question = questions.filter(question => question.getId() === this.#id)[0];
+        const newAnswers = this.#answersList.map(answer => answers.filter(a => answer.id === a.id)[0]);
         this.#text = question.getQuestionText();
+        this.#answersList = newAnswers
     }
 
     getObject() {

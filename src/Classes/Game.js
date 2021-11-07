@@ -73,7 +73,8 @@ export class Game {
     setLanguage(language){
         this.#language = language;
         const questions = _loadFile(_places[this.#gameName], _targetFolders.questions, language);
-        this.#stages.map(stage => stage.updateLanguage(questions))
+        const answers = _loadFile(_places[this.#gameName], _targetFolders.answers, language);
+        this.#stages.map(stage => stage.updateLanguage(questions, answers));
     }
     
     getObject() {

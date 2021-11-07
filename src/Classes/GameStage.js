@@ -38,7 +38,7 @@ export class GameStage {
         };
     }
     
-    updateLanguage(newQuestions) {
-        this.#questions.map(question => question.updateLanguage(newQuestions))
+    updateLanguage(newQuestions, answers) {
+        this.#questions.map(question => question.updateLanguage(newQuestions, answers))
     }
 }

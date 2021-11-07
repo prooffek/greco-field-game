@@ -28,6 +28,7 @@ function loadAnswers(targetFolder) {
 
 function loadQuestions() {
     const questions = [];
+    const answers = loadAnswers(_targetFolders.answers);
     
     for (const question of require(`../_jsonFiles/${placeName}/Questions/${lang}-questions.json`)) {
         questions.push(
@@ -36,7 +37,8 @@ function loadQuestions() {
                 question.text, 
                 question.correctAnswerId, 
                 question.stage,
-                loadAnswers(_targetFolders.answers)));
+                answers
+            ));
     }
     
     return questions;
