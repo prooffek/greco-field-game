@@ -52,32 +52,32 @@
     {
       "id": 10,
       "questionId": [7],
-      "text": "answer 11"
+      "text": "Modern Greek"
     },
     {
       "id": 11,
       "questionId": [7],
-      "text": "answer 12"
+      "text": "Ancient Greek"
     },
     {
       "id": 12,
       "questionId": [7],
-      "text": "answer 13"
+      "text": "Italian"
     },
     {
       "id": 13,
       "questionId": [7],
-      "text": "answer 14"
+      "text": "Gréko"
     },
     {
       "id": 14,
       "questionId": [7],
-      "text": "answer 15"
+      "text": "Modern Greek and Gréko"
     },
     {
       "id": 15,
       "questionId": [0],
-      "text": "Dròmo Patrùna ti Grècia (Ulica Matki Boskiej Greckiej)"
+      "text": "Dròmo Patrùna ti Grècia (Street of the Madonna of Greece)"
     },
     {
       "id": 16,
