@@ -2,61 +2,61 @@
   {
     "id": 0,
     "text": "What is the Grèko name for the street leading to the village of Gaḍḍicianò?",
-    "correctAnswer": 15,
+    "correctAnswerId": 15,
     "stage": 0
   },
   {
     "id": 1,
     "text": "Choose non-Italian names of the central square of the village.",
-    "correctAnswer": 16,
+    "correctAnswerId": 16,
     "stage": 1
   },
   {
     "id": 2,
     "text": "Whose name bears the Ethnographioc Museum?",
-    "correctAnswer": 17,
+    "correctAnswerId": 17,
     "stage": 2
   },
   {
     "id": 3,
     "text": "Entering the Ethnographic Museum write down your name in the book and find there what was transported in a bagpipe from the village to the seaside - what is the Grèko name of the goods?",
-    "correctAnswer": 18,
+    "correctAnswerId": 18,
     "stage": 2
   },
   {
     "id": 4,
     "text": "What is the Grèko name of the fountain?",
-    "correctAnswer": 19,
+    "correctAnswerId": 19,
     "stage": 3
   },
   {
     "id": 5,
     "text": "Walk up to the top of the Greek Amphitheatre of Bartholomeo I. What river valley do you see?",
-    "correctAnswer": 20,
+    "correctAnswerId": 20,
     "stage": 4
   },
   {
     "id": 6,
     "text": "What should you do 3 times when entering the Orthodox Church of the Madonna of Greece (Panaghìa tis Ellàdas)?",
-    "correctAnswer": 21,
+    "correctAnswerId": 21,
     "stage": 5
   },
   {
     "id": 7,
     "text": "The white marble slab near St. John the Baptist Church presents a text in 2 languages. What are these languages?",
-    "correctAnswer": 22,
+    "correctAnswerId": 22,
     "stage": 6
   },
   {
     "id": 8,
     "text": "What is the Grèko name of the street you are going down from St. John the Baptist Church to the exhibition of old agricultural machinery?",
-    "correctAnswer": 23,
+    "correctAnswerId": 23,
     "stage": 6
   },
   {
     "id": 9,
     "text": "What is the Grèko name of the machinery mention in the previous question?",
-    "correctAnswer": 24,
+    "correctAnswerId": 24,
     "stage": 7
   }
 ]

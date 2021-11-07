@@ -33,6 +33,7 @@ export class Question {
     }
     
     getCorrectAnswer(answers) {
+        console.log(this.#correctAnswerId);
         const answer = answers.filter(answer => answer.id === this.#correctAnswerId);
         return answer ? answer[0] : null;
     }
@@ -47,6 +48,7 @@ export class Question {
     }
     
     setAnswersList(answers) {
+        // console.log(answers);
         const availableAnswers = answers.filter(answer => answer.questionId.includes(this.#id));
         const correctAnswer = this.getCorrectAnswer(availableAnswers);
         

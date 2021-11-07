@@ -20,7 +20,7 @@ const gameName = _gameNamesDict.Italy.Gaddiciano;
 const newPlayer = new Player();
 
 const initState = {
-  [_state.game]: new Game(gameName, newPlayer, _languages.polish),
+  [_state.game]: new Game(gameName, newPlayer, _languages.english),
   [_state.phase]: gamePhases.welcomePage
 }
 
@@ -29,6 +29,7 @@ function App() {
   const [state, setState] = useReducer(gameReducer, setInitState());
   
   function setInitState() {
+      // console.log(initState.game.getObject());
       const saved = localState ? {game: parsToGameObject(localState), phase: localState.phase} : null;
 
       if (!saved) {
