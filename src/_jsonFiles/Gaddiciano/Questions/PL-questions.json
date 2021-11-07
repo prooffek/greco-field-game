@@ -2,61 +2,61 @@
   {
     "id": 0,
     "text": "Jak nazywa się ulica prowadząca do wioski Gaḍḍicianò w Grèko?",
-    "correctAnswer": "Dròmo Patrùna ti Grècia (Ulica Matki Boskiej Greckiej)",
+    "correctAnswerId": 15,
     "stage": 0
   },
   {
     "id": 1,
     "text": "Wybierz jakie są niewłoskie nazwy głównego placu w wiosce.",
-    "correctAnswer": "Ròcca tu Coràcu, \nKiàzza Àlimos, \nPlatìa Àlimos",
+    "correctAnswerId": 16,
     "stage": 1
   },
   {
     "id": 2,
     "text": "Czyje imię nosi Muzeum Etnograficzne?",
-    "correctAnswer": "Angela Bogasari Merianoù / Anzel Merianoù",
+    "correctAnswerId": 17,
     "stage": 2
   },
   {
     "id": 3,
     "text": "Wchodząc do Muzeum Etnograficznego wpisz się do książki pamiątkowej i znajdź w niej, co miejscowa ludność transportowała w dudach na wybrzerze. Jak ten produkt nazywa się w Grèko?",
-    "correctAnswer": "Crasì / Krasì (wino) \nAlealàdi (oliwa z oliwek)",
+    "correctAnswerId": 18,
     "stage": 2
   },
   {
     "id": 4,
     "text": "Jaką źródełko nazywa się w Grèko?",
-    "correctAnswer": "Cànnalo tis Agàpi (Źródełko miłości)",
+    "correctAnswerId": 19,
     "stage": 3
   },
   {
     "id": 5,
     "text": "Podejdź na szczyt greckiego amfiteatru im. Bartholomeo I. Dolinę jakiej rzeki stamtąd widać?",
-    "correctAnswer": "Amandolea",
+    "correctAnswerId": 20,
     "stage": 4
   },
   {
     "id": 6,
     "text": "Co należy zrobić trzy razy wchodząc do prawosławnego kościołu pw. Matki Boskiej Greckiej (Panaghìa tis Ellàdas)?",
-    "correctAnswer": "Cudunìzo (zadzwonić dzwonkiem)",
+    "correctAnswerId": 21,
     "stage": 5
   },
   {
     "id": 7,
     "text": "Na marmurowej tablicy w pobliżu kościoła pw. św. Jana Chrzciciela widnieje napis w dwóch językach. Jakich?",
-    "correctAnswer": "Grecki i włoski",
+    "correctAnswerId": 22,
     "stage": 6
   },
   {
     "id": 8,
     "text": "Jak nazywa się w Grèko ulica ciągnąca się w dół od kościołu pw. św. Jana Chrzciciela do wystawy starych narzędzi rolniczych?",
-    "correctAnswer": "Stenò Àghio Nìlo (Ulica św. Nila)",
+    "correctAnswerId": 23,
     "stage": 6
   },
   {
     "id": 9,
     "text": "Jak nazywają się w Grèko narzędzia rolnicze wspomnianych w poprzednim pytaniu?",
-    "correctAnswer": "Palei mìli ton alèo (Stara prasa do wytłaczania oliwy)",
+    "correctAnswerId": 24,
     "stage": 7
   }
 ]

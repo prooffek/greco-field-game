@@ -2,61 +2,61 @@
   {
     "id": 0,
     "text": "Πώς λέγεται στα γκρεκάνικα η οδός προς το χωριό Γκαντντιτσιανό;",
-    "correctAnswer": "Dròmo Patrùna ti Grècia (η οδός της Παναγιάς της Ελλάδος)",
+    "correctAnswer": 15,
     "stage": 0
   },
   {
     "id": 1,
     "text": "Ποιες είναι οι μη ιταλικές ονομασίες της κύριας πλατείας στο χωριό;",
-    "correctAnswer": "Ròcca tu Coràcu, \nKiàzza Àlimos, \nPlatìa Àlimos",
+    "correctAnswer": 16,
     "stage": 1
   },
   {
     "id": 2,
     "text": "Ποιανού όνομα φέρει το Εθνικό Μουσείο στο χωριό;",
-    "correctAnswer": "Angela Bogasari Merianoù / Anzel Merianoù",
+    "correctAnswer": 17,
     "stage": 2
   },
   {
     "id": 3,
     "text": "Entering the Ethnographic Museum write down your name in the book and find there what was transported in a bagpipe from the village to the seaside - what is the Grèko name of the goods?",
-    "correctAnswer": "Crasì / Krasì (wine) \nAlealàdi (olive oil)",
+    "correctAnswer": 18,
     "stage": 2
   },
   {
     "id": 4,
     "text": "What is the Grèko name of the fountain?",
-    "correctAnswer": "Cànnalo tis Agàpi (The Fountain of Love)",
+    "correctAnswer": 19,
     "stage": 3
   },
   {
     "id": 5,
     "text": "Walk up to the top of the Greek Amphitheatre of Bartholomeo I. What river valley do you see?",
-    "correctAnswer": "Amandolea",
+    "correctAnswer": 20,
     "stage": 4
   },
   {
     "id": 6,
     "text": "What should you do 3 times when entering the Orthodox Church of the Madonna of Greece (Panaghìa tis Ellàdas)?",
-    "correctAnswer": "Cudunìzo (to ring the bell)",
+    "correctAnswer": 21,
     "stage": 5
   },
   {
     "id": 7,
     "text": "The white marble slab near St. John the Baptist Church presents a text in 2 languages. What are these languages?",
-    "correctAnswer": "Greek and Italian",
+    "correctAnswer": 22,
     "stage": 6
   },
   {
     "id": 8,
     "text": "What is the Grèko name of the street you are going down from St. John the Baptist Church to the exhibition of old agricultural machinery?",
-    "correctAnswer": "Stenò Àghio Nìlo (Saint Nilus Street)",
+    "correctAnswer": 23,
     "stage": 6
   },
   {
     "id": 9,
     "text": "What is the Grèko name of the machinery mention in the previous question?",
-    "correctAnswer": "Palei mìli ton alèo (Archaic olive mills)",
+    "correctAnswer": 24,
     "stage": 7
   }
 ]
