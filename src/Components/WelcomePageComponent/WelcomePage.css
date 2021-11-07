@@ -16,32 +16,6 @@
     margin-bottom: 2vh;
 }
 
-.flags-container {
-    height: 10vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 2vh;
-}
-
-.flag {
-    margin: 0 2vw;
-    border: 3px solid var(--red-btn);
-    border-radius: 10%;
-}
-
-.not-selected-flag {
-    height: 5vh;
-    width: 8vh;
-    
-}
-
-.selected-flag {
-    height: 8vh;
-    width: 11vh;
-}
-
 @media only screen and (orientation: portrait) {
     .welcome-page-header {
         width: 100%;

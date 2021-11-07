@@ -92,7 +92,8 @@ export default function GameComponent(props) {
                     question={game.getStage(gameState.stageIndex).getQuestionObj(gameState.questionIndex)}
                     setGameState={onClickHandler}
                     player={game.getPlayer()}
-                    language={language}
+                    words={language}
+                    languageCode={game.getLanguage()}
                     setMainState={setState}
                 />
             }

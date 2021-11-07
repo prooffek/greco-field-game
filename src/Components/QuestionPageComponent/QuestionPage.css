@@ -1,6 +1,6 @@
 ﻿.question-page-container {
     display: grid;
-    grid-template-columns: minmax(30px, 5vw) 1fr;
+    grid-template-columns: 10vw 1fr;
     grid-template-rows: minmax(100px, 10vh) 10vh 1fr minmax(50px,10vh);
     background: url("./../../img/map-background-2.png") no-repeat;
     background-size: cover;
@@ -113,5 +113,11 @@
     .answer-btn:hover,
     .answer-btn:active {
         font-size: 2vh;
+    }
+}
+
+@media only screen and (min-width: 950px) {
+    .question-page-container {
+        grid-template-columns: 5vw 1fr;
     }
 }
