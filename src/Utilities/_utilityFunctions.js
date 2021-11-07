@@ -3,12 +3,13 @@ import {Question} from "../Classes/Question";
 import {Player} from "../Classes/Player";
 import {Game} from "../Classes/Game";
 
-export function getRandomEl(counter, list) {
+export function getRandomEl(counter, list, correctAnswerId) {
     let listToReturn = [];
     
     while (listToReturn.length < counter) {
         const randomEl = list[Math.floor(Math.random() * list.length)];
-        if (!(listToReturn.includes(randomEl))) listToReturn.push(randomEl);
+        if (!(listToReturn.includes(randomEl)) && randomEl.id !== correctAnswerId) 
+            listToReturn.push(randomEl);
     }
     
     return listToReturn;
@@ -49,7 +50,7 @@ export function parsToGameObject(object) {
             stage.questions.map(question => new Question(
                 question.id,
                 question.text,
-                question.correctAnswer,
+                question.correctAnswerId,
                 question.stage,
                 question.answersList
             ))

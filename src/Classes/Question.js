@@ -6,14 +6,14 @@ const FINAL_ANSWERS_NUM = 4;
 export class Question {
     #id;
     #text;
-    #correctAnswer;
+    #correctAnswerId;
     #answersList;
     #stage;
 
-    constructor(id, text, correctAnswer, stage, answers) {
+    constructor(id, text, correctAnswerId, stage, answers) {
         this.#id = id;
         this.#text = text;
-        this.#correctAnswer = correctAnswer;
+        this.#correctAnswerId = correctAnswerId;
         this.#stage = stage;
         this.#answersList = this.setAnswersList(answers);
     }
@@ -29,21 +29,31 @@ export class Question {
     getQuestionText() {
         return this.#text;
     }
-
-    getCorrectAnswer() {
-        return this.#correctAnswer;
+    
+    getCorrectAnswer(answers) {
+        const answer = answers.filter(answer => answer.id === this.#correctAnswerId);
+        return answer ? answer[0] : null;
     }
     
-    isAnswerCorrect(answer){
-        return answer === this.#correctAnswer;
+    getAnswerText(answerId) {
+        const answer = this.#answersList.filter(answer => answer.id === answerId)[0];
+        return answer ? answer.text : null;
+    }
+    
+    isAnswerCorrect(answerId){
+        return answerId === this.#correctAnswerId;
     }
     
     setAnswersList(answers) {
-        if (answers.length === FINAL_ANSWERS_NUM && answers.includes(this.#correctAnswer))
+        const availableAnswers = answers.filter(answer => answer.questionId.includes(this.#id));
+        const correctAnswer = this.getCorrectAnswer(availableAnswers);
+        
+        if (availableAnswers.length === FINAL_ANSWERS_NUM && correctAnswer)
             return answers;
         
-        let answersList = [this.#correctAnswer, ...getRandomEl(WRONG_ANSWERS_NUM, answers)]
+        const answersList = [correctAnswer, ...getRandomEl(WRONG_ANSWERS_NUM, availableAnswers, this.#correctAnswerId)]
         shuffleList(answersList);
+        
         return answersList;
     }
     
@@ -54,14 +64,13 @@ export class Question {
     updateLanguage(questions) {
         const question = questions.filter(question => question.getId() === this.#id)[0];
         this.#text = question.getQuestionText();
-        this.#correctAnswer = question.getCorrectAnswer();
     }
 
     getObject() {
         return {
             id: this.#id,
             text: this.#text,
-            correctAnswer: this.#correctAnswer,
+            correctAnswerId: this.#correctAnswerId,
             stage: this.#stage,
             answersList: this.#answersList
         }

@@ -38,7 +38,7 @@ export const _reducerDict = {
 
 export const _targetFolders = {
     questions: "Questions",
-    wrongAnswers: "WrongAnswers"
+    answers: "WrongAnswers"
 }
 
 export const _places = {

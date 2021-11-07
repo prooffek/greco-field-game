@@ -4,11 +4,17 @@ export class Player {
     #name;
     #answers;
     #score;
+    #emptyAnswer
     
     constructor(name=null, answers=[], score=0) {
         this.#name = name;
         this.#answers = answers;
         this.#score = score;
+        this.#emptyAnswer = {
+            questionId : null, 
+            isCorrect : false, 
+            answerId : null
+        }
     }
     
     setName(name) {
@@ -29,7 +35,7 @@ export class Player {
     }
     
     addAnswer(answer) {
-        let prevAnswer = this.#answers.filter(a => a.questionId === answer.questionId)[0];
+        const prevAnswer = this.#answers.filter(a => a.questionId === answer.questionId)[0];
         this.#answers = removeDuplicatedAnswer(this.#answers, prevAnswer);
         this.#answers.push(answer);
     }
@@ -40,7 +46,7 @@ export class Player {
     
     getAnswer(questionId) {
         let answer = this.#answers.filter(a => a.questionId === questionId)[0];
-        return answer ? answer.answer : null;
+        return answer ? answer : this.#emptyAnswer;
     }
 
     getObject() {

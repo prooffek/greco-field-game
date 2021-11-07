@@ -7,12 +7,16 @@ export default function SummaryPage(props) {
     const questions = game.getAllQuestions();
     const language = props.language;
     
-    const isCorrect = question => question.isAnswerCorrect(player.getAnswer(question.getId()));
+    const isCorrect = question => player.getAnswer(question.getId()).isCorrect;
     
     const resetGame = () => {
         props.setState({
             type: _gameReducerActions.resetGame
         })
+    }
+    
+    const answerText = question => {
+        return question.getAnswerText(player.getAnswer(question.getId()).answerId);
     }
     
     return(
@@ -37,7 +41,7 @@ export default function SummaryPage(props) {
                                             {language.correctAnswer}: 
                                         </span> 
                                         <span className="answer-text">
-                                            {question.getCorrectAnswer()}
+                                            {question.getCorrectAnswer(question.getAnswersList()).text}
                                         </span>
                                     </p>
                                 }
@@ -46,7 +50,7 @@ export default function SummaryPage(props) {
                                         {language.yourAnswer}: 
                                     </span>
                                     <span className="answer-text">
-                                        {player.getAnswer(question.getId())}
+                                        {answerText(question)}
                                     </span>
                                 </p>
                             </div>

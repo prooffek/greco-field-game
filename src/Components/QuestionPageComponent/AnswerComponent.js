@@ -10,21 +10,22 @@ export default function AnswerComponent(props) {
     const answerHandler = (event) => {
         event.preventDefault();
         
-        const selected = event.target.name;
+        const selected = parseInt(event.target.value, 10);
         
         player.addAnswer({
                 questionId: question.getId(), 
                 isCorrect: question.isAnswerCorrect(selected),
-                answer: selected
+                answerId: selected
             }
         );
+        
         setSelectedAnswer(selected);
     }
     
     const isSelected = (answer) => {
         if (answer) {
             const selected = player.getAnswer(question.getId());
-            return answer === selected;
+            return  selected.answerId === answer.id;
         }
         return false;
     }
@@ -35,12 +36,12 @@ export default function AnswerComponent(props) {
             <div className="answers-container" >
                 {answers.map(a =>
                     <button
-                        key={`answer_${answers.indexOf(a)}`}
+                        key={`answer_${answers.indexOf(a.id)}`}
                         className={`answer-btn ${isSelected(a) ? "selected-answer-btn" : "unselected-answer-btn"}`}
-                        name={a}
+                        value={a.id}
                         onClick={answerHandler}
                     >
-                        {a}
+                        {a.text}
                     </button>
                 )}
             </div>
