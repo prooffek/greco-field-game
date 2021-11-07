@@ -2,82 +2,82 @@
   {
     "id": 0,
     "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
-    "text": "odpowiedź 1"
+    "text": "απάντηση 1"
   },
   {
     "id": 1,
     "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
-    "text": "odpowiedź 2"
+    "text": "απάντηση 2"
   },
   {
     "id": 2,
     "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
-    "text": "odpowiedź 3"
+    "text": "απάντηση 3"
   },
   {
     "id": 3,
     "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
-    "text": "odpowiedź 4"
+    "text": "απάντηση 4"
   },
   {
     "id": 4,
     "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
-    "text": "odpowiedź 5"
+    "text": "απάντηση 5"
   },
   {
     "id": 5,
     "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
-    "text": "odpowiedź 6"
+    "text": "απάντηση 6"
   },
   {
     "id": 6,
     "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
-    "text": "odpowiedź 7"
+    "text": "απάντηση 7"
   },
   {
     "id": 7,
     "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
-    "text": "odpowiedź 8"
+    "text": "απάντηση 8"
   },
   {
     "id": 8,
     "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
-    "text": "odpowiedź 9"
+    "text": "απάντηση 9"
   },
   {
     "id": 9,
     "questionId": [0, 1, 2, 3, 4, 5, 6, 8, 9],
-    "text": "odpowiedź 10"
+    "text": "απάντηση 10"
   },
   {
     "id": 10,
     "questionId": [7],
-    "text": "odpowiedź 11"
+    "text": "Νέα ελληνικά"
   },
   {
     "id": 11,
     "questionId": [7],
-    "text": "odpowiedź 12"
+    "text": "Ιταλικά"
   },
   {
     "id": 12,
     "questionId": [7],
-    "text": "odpowiedź 13"
+    "text": "Αρχαία ελληνικά"
   },
   {
     "id": 13,
     "questionId": [7],
-    "text": "odpowiedź 14"
+    "text": "Γκρεκάνικα"
   },
   {
     "id": 14,
     "questionId": [7],
-    "text": "odpowiedź 15"
+    "text": "Νέα ελληνικά και γκρεκάνικα"
   },
   {
     "id": 15,
     "questionId": [0],
-    "text": "Dròmo Patrùna ti Grècia (Ulica Matki Boskiej Greckiej)"
+    "text": "Dròmo Patrùna ti Grècia (οδός Παναγιάς της Ελλάδος)"
   },
   {
     "id": 16,
@@ -92,12 +92,12 @@
   {
     "id": 18,
     "questionId": [3],
-    "text": "Crasì / Krasì (wine) \nAlealàdi (olive oil)"
+    "text": "Crasì / Krasì (wine) \nAlealàdi (ελεόλαδο)"
   },
   {
     "id": 19,
     "questionId": [4],
-    "text": "Cànnalo tis Agàpi (The Fountain of Love)"
+    "text": "Cànnalo tis Agàpi (Πηγή της αγάπης)"
   },
   {
     "id": 20,
@@ -107,21 +107,21 @@
   {
     "id": 21,
     "questionId": [6],
-    "text": "Cudunìzo (to ring the bell)"
+    "text": "Cudunìzo (χτυπώ το κουδούνι)"
   },
   {
     "id": 22,
     "questionId": [7],
-    "text": "Greek and Italian"
+    "text": "Ελληνικά και ιταλικά"
   },
   {
     "id": 23,
     "questionId": [8],
-    "text": "Stenò Àghio Nìlo (Saint Nilus Street)"
+    "text": "Stenò Àghio Nìlo (οδός αγίου Νίλου)"
   },
   {
     "id": 24,
     "questionId": [9],
-    "text": "Palei mìli ton alèo (Archaic olive mills)"
+    "text": "Palei mìli ton alèo (παλιά ελεοτριβεία)"
   }
 ]
